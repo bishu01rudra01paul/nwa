@@ -1,0 +1,93 @@
+@media (min-width: 2560px) {
+  .full_body .container .col-lg-3 {
+    display: none;
+  }
+  .full_body .container .col-lg-9 {
+    width: 100%;
+  }
+  .full_body .container .collapsible_item > .card {
+    min-width: 765px;
+    height: 100%;
+    margin-right: 30px;
+  }
+  .full_body .container .collapsible_item {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  .full_body .container .collapsible_item::-webkit-scrollbar {
+    display: none;
+  }
+  .container {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  .relocation_series_page {
+    display: none;
+  }
+  #normal_screen_nab {
+    display: none;
+  }
+  #download_btn_pdf {
+    width: 340px !important;
+    margin-top: 0 !important;
+  }
+}
+@media (max-width: 2559px) {
+  #wide_screen_nab_steps {
+    display: none !important;
+  }
+  #steps_nav_wv_dpdf {
+    display: none !important;
+  }
+}
+@media (max-width: 575px) {
+  #top_nav {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  .navbar_button {
+    margin-top: 56px;
+  }
+  .logo {
+    z-index: 2;
+  }
+  .relocation_series_page {
+    margin-left: auto !important;
+  }
+  .relocation_series_page img {
+    width: 250px;
+  }
+  #normal_screen_nab .steps_pills .nav-item a {
+    font-size: 12px;
+  }
+  .step_header .watch_video span {
+    font-size: 12px;
+  }
+  .step_header h6 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 991px) {
+  #top_nav {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  .navbar_button {
+    margin-top: 56px;
+  }
+  .logo {
+    z-index: 2;
+  }
+  .step_header h6 {
+    font-size: 14px;
+  }
+  .step_header .watch_video span {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=screen.css.map */

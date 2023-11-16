@@ -1,4 +1,6 @@
 @import "variables.scss";
+@import "globalClass.scss";
+@import "screen.scss";
 
 body, html, *{
     font-family: 'Inter', sans-serif !important;
@@ -32,10 +34,8 @@ body, html, *{
             }
         }
         .relocation_series_page{
-            position: absolute;
-            top: 50%;
-            left: 10%;
-            transform: translateY(-50%);
+            height: 100%;
+            margin-left: 140px;
         }
     }
 }
@@ -60,7 +60,7 @@ body, html, *{
 
 .collapsible_item{
     .card-header{
-        padding: 20px;
+        padding: 10px 20px;
         cursor: pointer;
         background-color: $white_color;
         border-bottom: 0;
@@ -71,4 +71,152 @@ body, html, *{
             margin-bottom: 0;
         }
     }
+}
+
+.step_header{
+    h6{
+        font-weight: bold !important;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+    .step_number{
+        font-size: 13px;
+    }
+    .watch_video{
+        background-color: $lightRed_color;
+        color: $red_color;
+        font-weight: bold;
+        span{
+            font-size: 16px;
+        }
+    }
+    .pdf_circle_dn{
+        background-color: $lightRed_color;
+        padding: 10px;
+        text-align: center;
+    }
+    #right_arrow{
+        img{
+            transition: all 0.2s;
+        }
+    }
+}
+
+.sub_item{
+    .sub_item_header{
+        // font-weight: bold;
+        color: #272B27;
+        font-size: 14px;
+    }
+    .card-header{
+        background-color: $body_color;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .card-body{
+        .sub_itemofitem > h2{
+            font-size: 14px;
+            font-weight: bold;
+            span{
+                color: $red_color;
+            }
+        }
+    }
+    background-color: $body_color;
+    &:nth-child(even){
+        background-color: unset !important;
+        .card-header{
+            background-color: unset;
+        }
+        border: unset;
+    }
+    margin-bottom: 0 !important;
+}
+p{
+    font-size: 13px;
+}
+.sub_itemofitemofitems{
+    .sub_itemofitemofitem > h2{
+        font-size: 16px;
+        color: #000000;
+    }
+    border-left: 1px solid #D9D9DA;
+    .sub_itemofitemofitem{
+        &:last-child{
+            p{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.learn_more_button{
+    width: 280px !important;
+    cursor: pointer;
+    .rounded-circle{
+        background-color: $red_color;
+    }
+    div{
+        width: 32px;
+        height: 32px;
+        color: #fff;
+    }
+    span{
+        color: #272B27;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.test{
+    // max-height: 500px;
+    overflow-x: auto;
+    display: flex;
+    div{
+        min-width: 500px;
+        height: 500px;
+        margin-right: 20px;
+        background-color: #000000;
+    }
+}
+
+#popup_video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    .video_area{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 50%;
+        background-color: rgb(0, 0, 0);
+        border-radius: 10px;
+        #videoPlayer{
+            
+        }
+        #video_cross{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: -40px;
+            top: -40px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .vc_dpdf{
+            position: absolute;
+            top: 100%;
+        }
+    }
+}
+#download_btn_pdf{
+    width: 340px !important;
+    margin-top: 0 !important;
+}
+.viewCount{
+    background-color: #EEEEEE;
 }

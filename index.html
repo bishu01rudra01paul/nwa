@@ -14,10 +14,10 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="top_nav">
         <div class="container">
             <!-- <a class="navbar-brand logo" href="javascript:void(0)"><img src="images/logo.png" alt="Logo"></a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
@@ -52,7 +52,42 @@
         <div class="container">
             <div class="navbar_contant">
                 <a class="logo" href="javascript:void(0)"><img src="images/logo.png" alt="Logo"></a>
-                <img class="relocation_series_page" src="images/Relocation series page.png" alt="">
+                <div id="navbar_RSP_steps_wv_dpdf" class="d-flex align-items-center justify-content-between h-100">
+                    <div class="relocation_series_page d-flex align-items-center">
+                        <img src="images/Relocation series page.png" alt="">
+                    </div>
+                    <!-- <div id="wide_screen_nab"></div> -->
+                    <div id="wide_screen_nab_steps">
+                        <ul class="nav nav-pills steps_pills" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active rounded-pill text-capitalize" href="#step1">step1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link rounded-pill text-capitalize"  href="#step2">step 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link rounded-pill text-capitalize"  href="#step3">step 3</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link rounded-pill text-capitalize"  href="#step4">step 4</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link rounded-pill text-capitalize"  href="#step5">step 5</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link rounded-pill text-capitalize"  href="#step6">step 6</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="steps_nav_wv_dpdf" class="d-flex">
+                        <button class="btn text-capitalize rounded-pill introwatch_video d-flex align-items-center"><img src="images/video_button.png" alt=""><span class="ms-2 red_color fw-bold">watch video</span></button>
+                        <button id="download_btn_pdf" class="ms-4 btn bg_red w-100 d-flex justify-content-around align-items-center text-white font-weight-bold mt-3">
+                            <img src="images/pdf-icon download.png" alt="">
+                            <span>Download PDF</span>
+                            <img src="images/download icon.png" alt="">
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -60,92 +95,1078 @@
         <div class="container">
             <div class="pt-5">
                 <!-- Nav pills for steps-->
-                <ul class="nav nav-pills steps_pills" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active rounded-pill text-capitalize" data-bs-toggle="pill" href="#step1">step
-                            1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link rounded-pill text-capitalize" data-bs-toggle="pill" href="#step2">step 2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link rounded-pill text-capitalize" data-bs-toggle="pill" href="#step3">step 3</a>
-                    </li>
-                </ul>
+                <div class="row">
+                    <div class="col-12">
+                        <div id="normal_screen_nab">
+                            <ul class="nav nav-pills steps_pills" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active rounded-pill text-capitalize" href="#step1">step1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link rounded-pill text-capitalize"  href="#step2">step 2</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link rounded-pill text-capitalize"  href="#step3">step 3</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link rounded-pill text-capitalize"  href="#step4">step 4</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link rounded-pill text-capitalize"  href="#step5">step 5</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link rounded-pill text-capitalize"  href="#step6">step 6</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <!-- steps tab panes -->
                 <div class="row">
                     <div class="col-lg-9">
                         <div class="tab-content">
-                            <div id="step1" class="container tab-pane active"><br>
+                            <div class="tab-pane active"><br>
                                 <div id="accordion" class="collapsible_item">
-                                    <div class="card">
+                                    <div class="card" id="step1">
                                         <div class="card-header" href="#item1" data-bs-toggle="collapse">
-                                            Collapsible Group Item #1
+                                            <div class="step_header row align-items-center">
+                                                <div class="col-6">
+                                                    <div class="step_number mb-2">Step (1)</div>
+                                                    <h6>Initial Research</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="d-flex align-items-center justify-content-end">
+                                                        <div class="me-lg-3 me-1">
+                                                            <button class="btn text-capitalize rounded-pill watch_video d-flex align-items-center"><img src="images/video_button.png" alt=""><span class="ms-1 ms-md-2">watch video</span></button>
+                                                        </div>
+                                                        <div class="me-lg-5 me-2">
+                                                            <a class="pdf_circle_dn rounded-circle" href="#"><img src="images/pdf.png" alt=""></a>
+                                                        </div>
+                                                        <div id="right_arrow">
+                                                            <img src="images/right_arrow.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div id="item1" class="collapse show" data-bs-parent="#accordion">
+                                        <div id="item1" class="collapse show step" data-bs-parent="#accordion">
+                                            <div class="card-body">
+                                                <!-- ================== all sub items of step 1 ================ -->
+                                                <!-- ==================Housing================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of1" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">housing</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of1" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <!-- ==============Housing Market Prices (Buying & Renting)============== -->
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Housing Market Prices <span>(Buying & Renting)</span></h2>
+                                                                    <p>
+                                                                        Determine your budget, considering both your down payment and monthly expenses. Also take into account HOA fees, utilities, and property taxes.
+                                                                    </p>
+                                                                    <div class="sub_itemofitemofitems ms-4 ps-4 py-2">
+                                                                        <div class="sub_itemofitemofitem">
+                                                                            <h2>Buying</h2>
+                                                                            <p>
+                                                                                Buying - There are a million home search websites that will give you an idea of the prices sellers are asking for homes, but don’t rely on them to be accurate when it comes to their Estimates. For example, on Zillow’s website, they state that the Zestimate is within 5% of the sales price only 77% of the time. If you are searching for homes in Northwest Arkansas, you can use HomeSearch.NaturallyNWA.com to check out all of the properties for sale in NWA.
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="sub_itemofitemofitem">
+                                                                            <h2>Renting</h2>
+                                                                            <p class="mb-0">
+                                                                                Renting - Unfortunately, a lot of the best rentals never get advertised online or listed with a real estate agent, because the landlords can just stick a sign in the yard and have it rented the next day. If you are limited to searching online, Craigslist and FaceBook Marketplace are probably the best places to find desirable rental properties.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- ==============Types of Housing Available============== -->
+                                                                <div class="sub_itemofitem">
+                                                                    <h2>Types of Housing Available</h2>
+                                                                    <p>
+                                                                        Decide if you want a single family home, townhouse, condo, or an apartment. Weigh out the pros and cons of each to determine which best suits your needs and lifestyle.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem">
+                                                                    <h2>Location</h2>
+                                                                    <p>
+                                                                        Research neighborhoods or areas considering the proximity to work or desired amenities, future development plans for the area, and safety. The best sources for this information are Google Maps, or any of the 3rd party home search websites such as HomeSearch.NaturallyNWA.com, Zillow or Realtor.com. You can also search on local social media groups to ask local residents which areas they would suggest.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================cost of living================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of2" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Cost of living</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of2" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <!-- ==============Utilities============== -->
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Utilities</h2>
+                                                                    <p>
+                                                                        Look at the availability and cost of utilities like water, electricity, natural gas, and internet/cable services. City websites will typically provide a list of utility companies, and then you can contact the utility companies directly to get the most accurate information, but their websites will have rate information and details about basic service charges, usage rates and tiered pricing.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Grocery Prices</h2>
+                                                                    <p>
+                                                                        Grocery prices are a significant indicator of the overall cost of living in an area. A locale with high food prices might also have higher costs for other goods and services. Most of the major grocery chains have apps or websites that will allow you to browse selections and prices. You can also use apps like Instacart or Amazon Fresh to provide prices from various stores in an area, or price comparison websites like MySupermarket.com or Basket.com to compare prices across multiple supermarkets in an area.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Transportation Costs</h2>
+                                                                    <p>
+                                                                        If you have a personal vehicle, you’ll want to know the fuel costs, costs of parking, average vehicle maintenance costs, annual costs for registration and licensing, and car insurance rates. The State Department of Transportation websites can have information on tolls, gas prices, and infrastructure costs. AAA can provide information on the average cost of owning and operating a vehicle in a particular region, and there are multiple fuel price checker apps and websites available for understanding the costs associated with driving.
+                                                                    </p>
+                                                                </div>
+                                                                <!-- ===========================Taxes========================== -->
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Taxes</h2>
+                                                                    <p>
+                                                                        National and Regional tax authority websites (Like the IRS) are the primary source for tax rates and regulation. For state or county-specific taxes such as sales tax, income tax and property tax information, check the state and city government websites. There are also online calculators available for estimating taxes based on a location. 
+                                                                    </p>
+                                                                    <div class="sub_itemofitemofitems ms-4 ps-4 py-2">
+                                                                        <div class="sub_itemofitemofitem">
+                                                                            <h2>Income</h2>
+                                                                            <p>
+                                                                                some states or counties have their own income taxes, and there could be an income tax levied by the city.
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="sub_itemofitemofitem">
+                                                                            <h2>Property</h2>
+                                                                            <p>
+                                                                                Property - learn the rates and assessment procedures for residential properties, and understand the possible exemptions, deductions, or rebates, as well as how often properties are reassessed and the history of rate increases.
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="sub_itemofitemofitem">
+                                                                            <h2>Sales</h2>
+                                                                            <p>
+                                                                                Learn the rates and what goods and services it applies to, as well as any additional city sales taxes that are required. Also understand if there are any tax exemptions on certain goods or services in an area.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Employment Opportunities================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of3" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Employment Opportunities</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of3" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <!-- ==============Utilities============== -->
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Job Market and major employers</h2>
+                                                                    <p>
+                                                                        Determine which industries or sectors are strong in that area and identify the largest employers in the area. Look at whether the local job market is expanding, contracting, or stable. Local news
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Average Salary and Wage information</h2>
+                                                                    <p>
+                                                                        Determine which industries or sectors are strong in that area and identify the largest employers in the area. Look at whether the local job market is expanding, contracting, or stable. Local news
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Employment agencies or Job Fairs</h2>
+                                                                    <p>
+                                                                        Identify reputable staffing or recruitment agencies that cater to your profession or industry. Also search for upcoming job or career fairs where you can network, submit resumes and get a feel for the local job market in person.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Education================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of4" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Education</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of4" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Quality of Local Schools <span class="red_color">(public & private)</span></h2>
+                                                                    <p>
+                                                                        Use sources like GreatSchools.com, SchoolDigger.com, or the National Center for Education Statistics to get an idea of school rankings based on standardized test scores and other factors.  Review the types of courses offered, including Advanced Placement (AP) or International Baccalaureate (IB) programs, and investigate the variety and quality of sports, clubs, and other after-school activities. For families with children requiring additional support, look into the availability and quality of special education programs. Research the quality of physical facilities like libraries, gyms, science labs, and arts facilities.  You’ll also want to get an idea of the class sizes, as smaller class sizes often lead to more personalized attention for students.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Higher Education Institutions</h2>
+                                                                    <p>
+                                                                        Identify prominent institutions in the area, their specialities, and reputations. Community Colleges can offer more affordable education options and often provide community-focused courses and programs.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Adult Education or vocational training centers</h2>
+                                                                    <p>
+                                                                        Identify schools or centers offering training in specific trades or vocations . Some vocational centers have direct affiliations with industries, offering a pathway to employment after training.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Transportation================= --> 
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of5" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Transportation</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of5" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Public transportation options</h2>
+                                                                    <p>
+                                                                        If you rely on public transportation, you’ll want to know the extent of the coverage offered in your new area, as well as transit fares
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Major highways and traffic conditions</h2>
+                                                                    <p>
+                                                                        Major highways and traffic conditions - Evaluate how close major highways are to your prospective home and workplace. Research the number of entry and exit points, and if they’re conveniently located for your needs. Look into the general condition of the highways, and understand if there are upcoming plans for highway expansions, new constructions, or major repairs which might influence traffic. Check out the accident rates in an area and alternate routes in case of highway closures or heavy traffic. Determine if there are toll roads on your regular routes and understand the cost implications. Do these tolls take cash or do they require electronic transponders? Some good resources for this are Google Maps, Waze, Local Department of Transportation (DOT) websites, Local News Outlets, City or Regional Planning Websites, and community forums or Social Media.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Availability of parking</h2>
+                                                                    <p>
+                                                                        If commuting to urban areas, research the availability and cost of parking, and understand the rules, restrictions and costs associated with street parking.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Distance to major cities and destinations</h2>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Local airports</h2>
+                                                                    <p>
+                                                                        If you are a frequent flyer, you’ll want to know the costs and frequencies of flights from the local airport.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Healthcare================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of6" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Healthcare</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of6" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Hospitals and Clinics</h2>
+                                                                    <p>
+                                                                        Hospitals and Clinics - Investigate their reputations through patient reviews and rankings on trusted platforms like Healthgrades.com, RateMDs.com or even Google. If you have specific health concerns, ensure the nearby hospitals offer specialized departments.  Familiarize yourself with the wait times for emergency rooms and ascertain which facilities function as trauma centers. Some Hospitals have affiliations with universities, which might provide advanced treatments or research opportunities.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Specialist doctors and general practitioners</h2>
+                                                                    <p>
+                                                                        Seek recommendations from your current providers and verify them with online reviews. Ensure your chosen doctors are board-certified in their specialty and identify their hospital affiliations. Gauge the typical wait times for appointments.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Health Insurance options</h2>
+                                                                    <p>
+                                                                        research both national and regional health insurance providers to gauge their reputations. Ensure potential hospitals and doctors fall within the insurance’s coverage network to avoid high out-of-network costs. Learn what types of plans are available such as HMO, PPO, or EPO, to find the best fit based on cost and flexibility.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Safety and Crime================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of7" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Safety and Crime</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of7" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Crime rates and types</h2>
+                                                                    <p>
+                                                                        Compare local crime rates to regional and national averages, as well as your current city. Focus on both violent and property crime statistics to get a comprehensive view. Additionally, obtain a breakdown of specific types of crimes prevalent in the area, such as burglaries vs vehicle thefts. Monitor trends to discern whether crime rates have been rising, stable, or decreasing over the years. Useful resources for this research include the FBI’s Uniform Crime Reporting Program, local police department websites, and crime mapping services like CrimeReports.com or NeighborhoodScout.com.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Local police and fire departments</h2>
+                                                                    <p>
+                                                                        Investigate average response times to nearest police and fire departments. Check out the level of community involvement and outreach programs initiated by the police department. Assess the capabilities, equipment, and training of the local fire department, especially if specific concerns, such as high-rise or forest fires are relevant. Official websites of these departments, local news outlets, and community forums like NextDoor can be valuable resources.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2>Neighborhood watch or community safety programs</h2>
+                                                                    <p>
+                                                                        Explore the activities they undertake, such as regular meetings, patrols, or community training sessions, and evaluate their reported impact on local safety. The National Neighborhood Watch, community centers, and local libraries can provide insight into existing programs, their initiatives, and effectiveness in bolstering community safety.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Recreation and Lifestyle================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of8" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Recreation and Lifestyle</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of8" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Parks and Outdoor Activities</h2>
+                                                                    <p>
+                                                                        Seek out green spaces of various sizes that are suitable for relaxation, exercise, or family outings. Investigate outdoor activities available, such as hiking trails, biking paths, and water sports facilities. Check for amenities within parks like playgrounds, sports courts, or picnic areas. Local municipality websites, trail platforms like AllTrails.com, and tourism sites are great resources for this research.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Gyms and fitness centers</h2>
+                                                                    <p>
+                                                                        Survey the types of gyms available (chain vs locally owned) and check out the range of facilities and classes they offer, and any special amenities like pools or saunas. Be aware of membership fees and potential contract terms. Platforms like Google Maps, Yelp, and the gyms’ own websites are great tools for this research.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Clubs, bars and nightlife</h2>
+                                                                    <p>
+                                                                        Gauge the spectrum of options, identify venues that are popular or have top reviews, and assess the safety of areas known for nightlife. Yelp, local entertainment publications, and social media channels can offer insights into the most happening and recommended spots in town.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Cultural events, theaters and museums</h2>
+                                                                    <p>
+                                                                        Stay updated on festivals, exhibitions, and live performances. Local tourism sites, platforms like Eventbrite, and venue-specific websites are invaluable for schedules, exhibitions, and ticketing details.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Shopping and Amenities================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of9" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Shopping and Amenities</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of9" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Shopping centers and malls</h2>
+                                                                    <p>
+                                                                        Understand the diversity of stores and check for additional amenities like cinemas or food courts. Google Maps, shopping center websites, and local business directories can offer deeper insight into store listings and user reviews.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Grocery stores</h2>
+                                                                    <p>
+                                                                        Determine the types of stores available, whether they’re large supermarkets, local grocers, or specialty markets. Consider the price points and product range. Google Maps, Yelp and store flyers can offer valuable insights into store locations and offerings.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Restaurants and cafes</h2>
+                                                                    <p>
+                                                                        Gauge the variety of cuisines available and seek-out popular, well-reviewed spots. Discern the balance between upscale restaurants, mid-tier eateries, and budget-friendly options by using platforms such as Yelp, Zomato, and Google Maps.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Climate and Geography================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of10" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Climate and Geography</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of10" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Average temps, rainfall and snow</h2>
+                                                                    <p>
+                                                                        Understand the seasonal variations and monthly temperature ranges, as well as the precipitation patterns and unusual weather patterns or extremes the area might experience. Resources like the National Weather Service, Weather.com, and local meteorological departments provide comprehensive climate data to guide your understanding.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Natural disasters common to the area</h2>
+                                                                    <p>
+                                                                        Understand the frequency and type of natural disasters in your new area, and familiarize yourself with local community and government preparedness and response strategies for these disasters. The Federal Emergency Management Agency (FEMA), local emergency management departments, and the U.S. Geological Survey offer invaluable information on disaster-prone areas and safety measures.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Geographical features <span class="red_color">(mountains, lakes, rivers, etc)</span></h2>
+                                                                    <p>
+                                                                        Gauge the variety of cuisines available and seek-out popular, well-reviewed spots. Discern the balance between upscale restaurants, mid-tier eateries, and budget-friendly options by using platforms such as Yelp, Zomato, and Google Maps.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Community and Social Aspects================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of11" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Community and Social Aspects</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of11" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Demographics</h2>
+                                                                    <p>
+                                                                        Check out the U.S. Census Bureau, City-Data.com, and local government websites for gathering detailed demographic details like age distribution, ethnic composition, education levels, and economic data like income levels and dominant industries to get a clearer picture of the community’s socio-economic landscape.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Community events and social groups</h2>
+                                                                    <p>
+                                                                        Using platforms like Meetup.com and Eventbrite, you can explore local community events, and connect with social groups aligned with your personal interests.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Religious institutions</h2>
+                                                                    <p>
+                                                                        Using Google Maps, local directories, and various institution websites, check out the variety of religious institutions, service timings, languages of service, and community outreach initiatives that resonate with your beliefs.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Utilities and Services================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of12" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Utilities and Services</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of12" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">internet and cable providers</h2>
+                                                                    <p>
+                                                                        Websites like BroadbandNow.com and official ISP sites offer comprehensive details about the available providers, their packages and pricing, and assess their service quality through customer reviews.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">water and trash services</h2>
+                                                                    <p>
+                                                                        Local government websites and utility company websites will provide you with details on the providers in the area, whether municipally provided or privatized, and their service schedules and associated costs.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Energy providers and options</h2>
+                                                                    <p>
+                                                                        State Public Utility Commission websites and DSIRE will provide insights into licensed providers and their rate plans, and renewable energy incentives.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Local Government and Services================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of13" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Local Government and Services</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of13" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Municipal services <span class="red_color">(waste management, recycling)</span></h2>
+                                                                    <p>
+                                                                        Use local government websites, community centers and town hall meetings to understand the municipal services, like road maintenance and public health offerings, as well as the locations of key municipal offices.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Local regulations and ordinances</h2>
+                                                                    <p>
+                                                                        The City or County Clerk’s Office, local public libraries, and inline municipal codes are valuable resources for accessing and understanding zoning laws, traffic rules, and pet regulations.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Voting and political landscape</h2>
+                                                                    <p>
+                                                                        Local Board of Elections, newspapers, and the state’s Secretary of State website are great resources for understanding the voter registration process, local election schedules, and the prominent political parties and figures.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Future Development================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of14" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Future Development</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of14" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Planned developments or projects in the area</h2>
+                                                                    <p>
+                                                                        Local Planning and Zoning Offices, government websites, and community meetings are invaluable for accessing detailed information on the types of projects, their potential impact on traffic and infrastructure, and timelines.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Potential changes in property values</h2>
+                                                                    <p>
+                                                                        Real Estate Websites, local agents, and the County Property Appraiser’s Office are vital resources for researching historical property value trends, key influencing factors, and expert forecasts.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Upcoming infrastructure projects</h2>
+                                                                    <p>
+                                                                        The Local Department of Transportation, news outlets, and city or county public works departments are primary sources of information to be informed of upcoming infrastructural projects such as road constructions or public transport expansions.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Child and Elderly Care================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of15" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Child and Elderly Care</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of15" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Daycare centers and services</h2>
+                                                                    <p>
+                                                                        Use Care.com and local parenting forums to provide valuable insights into quality and reputable daycare services in the area, their accreditations, associated costs and parent feedback.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Elderly care facilities or home care services</h2>
+                                                                    <p>
+                                                                        Resources like the Department of Health, websites like APlaceForMom.com, and community centers can guide you in understanding the types of services offered, licensing, costs, and firsthand reviews.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Reviews and Testimonies================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#item1of16" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Reviews and Testimonies</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="item1of16" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Online forums or community boards for personal experiences</h2>
+                                                                    <p>
+                                                                        PLatforms like City-Data Forums, specific Reddit subreddits, and local Facebook groups offer city or neighborhood-specific discussions and provide valuable insights into local issues, the community spirit, and firsthand experiences regarding safety and services in the area.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Testimonies from current or past residents</h2>
+                                                                    <p>
+                                                                        Resources like NextDoor offer neighborhood-specific insights into the quality of life, prevalent concerns, and general recommendations for a new area.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==============================more button============================ -->
+                                                <div class="mt-3">
+                                                    <div class="learn_more_button d-flex align-items-center px-3 py-2 justify-content-between mx-auto">
+                                                        <div class="rounded-circle d-flex justify-content-center align-items-center">
+                                                            <img src="images/rightArowMoreStep.png" alt="">
+                                                        </div>
+                                                        <span class="text-capitalize">Learn more about step</span>
+                                                        <div class="rounded-circle d-flex justify-content-center align-items-center">
+                                                            1
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card" id="step2">
+                                        <div class="card-header" href="#item2" data-bs-toggle="collapse">
+                                            <div class="step_header row align-items-center">
+                                                <div class="col-6">
+                                                    <div class="step_number mb-2">Step (2)</div>
+                                                    <h6>Find the Right Relocation Specialist</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="d-flex align-items-center justify-content-end">
+                                                        <div class="me-lg-3 me-1">
+                                                            <button class="btn text-capitalize rounded-pill watch_video d-flex align-items-center"><img src="images/video_button.png" alt=""><span class="ms-1 ms-md-2">watch video</span></button>
+                                                        </div>
+                                                        <div class="me-lg-5 me-2">
+                                                            <a class="pdf_circle_dn rounded-circle" href="#"><img src="images/pdf.png" alt=""></a>
+                                                        </div>
+                                                        <div id="right_arrow">
+                                                            <img src="images/right_arrow.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="item2" class="collapse step" data-bs-parent="#accordion">
+                                            <div class="card-body">
+                                                <!-- ==================Services Provided by a Relocation Specialist================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#step2of1" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Services Provided by a Relocation Specialist</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="step2of1" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Home Finding</h2>
+                                                                    <p>
+                                                                        Assisting in finding a new home that meets your criteria.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Home Selling</h2>
+                                                                    <p>
+                                                                        If you’re relocating to a new location, they can often connect you with another realtor to assist you with selling your current property.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Temporary Housing</h2>
+                                                                    <p>
+                                                                        Assistance in finding temporary housing if needed.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Moving Services</h2>
+                                                                    <p>
+                                                                        Recommendations or coordination with trusted moving companies.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">School Searches</h2>
+                                                                    <p>
+                                                                        Assistance in finding schools, if you have kids, based on the quality of education, location, and other criteria.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">City Orientation Tours:</h2>
+                                                                    <p>
+                                                                        Providing tours of the new city or area to familiarize you with the important landmarks, amenities and more.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Connection to Local Services</h2>
+                                                                    <p>
+                                                                        Recommending or setting up essential services like utilities, healthcare providers, local banks, etc.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Cost of Living Analyses</h2>
+                                                                    <p>
+                                                                        Providing a detailed breakdown of the cost of living in the new area compared to your previous location.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card" id="step3">
+                                        <div class="card-header" href="#item3" data-bs-toggle="collapse">
+                                            <div class="step_header row align-items-center">
+                                                <div class="col-6">
+                                                    <div class="step_number mb-2">Step (3)</div>
+                                                    <h6>Determining Your Real Estate Options</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="d-flex align-items-center justify-content-end">
+                                                        <div class="me-lg-3 me-1">
+                                                            <button class="btn text-capitalize rounded-pill watch_video d-flex align-items-center"><img src="images/video_button.png" alt=""><span class="ms-1 ms-md-2">watch video</span></button>
+                                                        </div>
+                                                        <div class="me-lg-5 me-2">
+                                                            <a class="pdf_circle_dn rounded-circle" href="#"><img src="images/pdf.png" alt=""></a>
+                                                        </div>
+                                                        <div id="right_arrow">
+                                                            <img src="images/right_arrow.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="item3" class="collapse step" data-bs-parent="#accordion">
+                                            <div class="card-body">
+                                                <!-- ==================About your home================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#step3of1" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">About your home</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="step3of1" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Budget</h2>
+                                                                    <p>
+                                                                        How much are you willing to spend on a new home? This will determine neighborhoods, home sizes and types you can afford.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Home Size and Features</h2>
+                                                                    <p>
+                                                                        # Of beds/baths, maintenance considerations (newer vs older homes), features (open floor plan, large yard, pool, etc)
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Accessibility</h2>
+                                                                    <p>
+                                                                        For those who have disabilities and need wheelchair ramps, wider doorways and first floor bedrooms.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Location and neighborhood================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#step3of2" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Location and neighborhood</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="step3of2" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Location</h2>
+                                                                    <p>
+                                                                        Proximity to work, family/friends, desired amenities, urban vs suburban vs rural preferences.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">School Districts</h2>
+                                                                    <p>
+                                                                        Quality and reputation of schools are important if you have kids.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Safety and Crime Rates</h2>
+                                                                    <p>
+                                                                        Safety concerns can influence neighborhood choices and security features you might want to consider.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Lifestyle and Cultural Fit</h2>
+                                                                    <p>
+                                                                        The demographics or vibe of the neighborhood might be important based on your lifestyle and personal values.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Public Transportation and Infrastructure</h2>
+                                                                    <p>
+                                                                        Availability and convenience of public transportation, and quality of roads and other infrastructure.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Financial Considerations================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#step3of3" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Financial Considerations</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="step3of3" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Long Term Goals</h2>
+                                                                    <p>
+                                                                        Is this a forever home, short term, or investment property? Your long term plans might affect the type of property you should buy.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Future Resale Value</h2>
+                                                                    <p>
+                                                                        Consider potential growth and development of the area. Buying in up-and-coming areas might result in a higher return on investment Tax Implications that can affect your monthly costs (property, state income, sales tax).
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ==================Other considerations================= -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#step3of4" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Other considerations</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="step3of4" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Healthcare Facilities</h2>
+                                                                    <p>
+                                                                        Proximity to hospitals, clinics and other healthcare providers.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Employment Opportunities</h2>
+                                                                    <p>
+                                                                        Proximity to potential job opportunities, especially if relocating without a job already lined up.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Recreational and Social Activities</h2>
+                                                                    <p>
+                                                                        Proximity to parks, shopping, restaurants, bars, etc.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Local Regulations</h2>
+                                                                    <p>
+                                                                        HOA Covenants/Restrictions, local zoning laws, or anything else that might affect your plans for the property.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Market Conditions</h2>
+                                                                    <p>
+                                                                        Are you moving to a buyer or seller’s market? This can affect your negotiation powers.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card" id="step4">
+                                        <div class="card-header" href="#item4" data-bs-toggle="collapse">
+                                            <div class="step_header row align-items-center">
+                                                <div class="col-6">
+                                                    <div class="step_number mb-2">Step (4)</div>
+                                                    <h6>Initial Research</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="d-flex align-items-center justify-content-end">
+                                                        <div class="me-lg-3 me-1">
+                                                            <button class="btn text-capitalize rounded-pill watch_video d-flex align-items-center"><img src="images/video_button.png" alt=""><span class="ms-1 ms-md-2">watch video</span></button>
+                                                        </div>
+                                                        <div class="me-lg-5 me-2">
+                                                            <a class="pdf_circle_dn rounded-circle" href="#"><img src="images/pdf.png" alt=""></a>
+                                                        </div>
+                                                        <div id="right_arrow">
+                                                            <img src="images/right_arrow.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="item4" class="collapse step" data-bs-parent="#accordion">
                                             <div class="card-body">
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                                                 commodo consequat.
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card">
-                                        <div class="card-header" data-bs-toggle="collapse" href="#item2">
-                                            Collapsible Group Item #2
+                                    <div class="card" id="step5">
+                                        <div class="card-header" href="#item5" data-bs-toggle="collapse">
+                                            <div class="step_header row align-items-center">
+                                                <div class="col-6">
+                                                    <div class="step_number mb-2">Step (5)</div>
+                                                    <h6>Initial Research</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="d-flex align-items-center justify-content-end">
+                                                        <div class="me-lg-3 me-1">
+                                                            <button class="btn text-capitalize rounded-pill watch_video d-flex align-items-center"><img src="images/video_button.png" alt=""><span class="ms-1 ms-md-2">watch video</span></button>
+                                                        </div>
+                                                        <div class="me-lg-5 me-2">
+                                                            <a class="pdf_circle_dn rounded-circle" href="#"><img src="images/pdf.png" alt=""></a>
+                                                        </div>
+                                                        <div id="right_arrow">
+                                                            <img src="images/right_arrow.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div id="item2" class="collapse" data-bs-parent="#accordion">
+                                        <div id="item5" class="collapse step" data-bs-parent="#accordion">
                                             <div class="card-body">
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                                                 commodo consequat.
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card">
-                                        <div class="card-header" data-bs-toggle="collapse" href="#item3">
-                                            Collapsible Group Item #3
+                                    <div class="card" id="step6">
+                                        <div class="card-header" href="#item6" data-bs-toggle="collapse">
+                                            <div class="step_header row align-items-center">
+                                                <div class="col-6">
+                                                    <div class="step_number mb-2">Step (6)</div>
+                                                    <h6>Initial Research</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="d-flex align-items-center justify-content-end">
+                                                        <div class="me-lg-3 me-1">
+                                                            <button class="btn text-capitalize rounded-pill watch_video d-flex align-items-center"><img src="images/video_button.png" alt=""><span class="ms-1 ms-md-2">watch video</span></button>
+                                                        </div>
+                                                        <div class="me-lg-5 me-2">
+                                                            <a class="pdf_circle_dn rounded-circle" href="#"><img src="images/pdf.png" alt=""></a>
+                                                        </div>
+                                                        <div id="right_arrow">
+                                                            <img src="images/right_arrow.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div id="item3" class="collapse" data-bs-parent="#accordion">
+                                        <div id="item6" class="collapse step" data-bs-parent="#accordion">
                                             <div class="card-body">
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                                                 commodo consequat.
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="step2" class="container tab-pane fade"><br>
-                                <h3>Menu 1</h3>
-                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea commodo
-                                    consequat.</p>
-                            </div>
-                            <div id="step3" class="container tab-pane fade"><br>
-                                <h3>Menu 2</h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                    laudantium,
-                                    totam rem aperiam.</p>
-                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 bg-black">
+                    <div class="col-lg-3 mt-5 mt-lg-0">
+                       <div id="introPlayer" class="rounded">
 
+                       </div>
+                        <button class="btn bg_red w-100 d-flex justify-content-around align-items-center text-white font-weight-bold mt-3">
+                            <img src="images/pdf-icon download.png" alt="">
+                            <span>Download PDF</span>
+                            <img src="images/download icon.png" alt="">
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-
-
+    <!-- ====================
+         popup video  
+    ========================= -->
+    <div id="popup_video" class="d-none">
+        <div class="video_area">
+            <div id="videoPlayer" class="w-100 h-100 rounded">
+                <div id="player" class="rounded"></div>
+            </div>
+            <div id="video_cross" class="bg_red d-flex justify-content-center align-items-center"><img src="images/cross.png" alt=""></div>
+            <div class="vc_dpdf d-flex align-items-center justify-content-between w-100 mt-3">
+                <div class="viewCount p-3 rounded d-flex align-items-center">
+                    <img src="images/viewCount.png" alt="">
+                    <span class="ms-2 videoViewCount"></span>
+                </div>
+                <button id="download_btn_pdf" class="py-2 px-4 ms-4 btn bg_red w-100 d-flex justify-content-between align-items-center text-white font-weight-bold mt-3">
+                    <img src="images/pdf-icon download.png" alt="">
+                    <span>Download PDF</span>
+                    <img src="images/download icon.png" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+   <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+    </button> -->
+  
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+        </div>
+        </div>
+    </div> -->
+   
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/ytData.js"></script>
     <script src="js/custom.js"></script>
 </body>
 
