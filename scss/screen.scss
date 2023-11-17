@@ -47,9 +47,8 @@
       width: 340px !important;
       margin-top: 0 !important;
    }
-   // .relocation_series_page{
-   //    display: none !important;
-   // }
+   
+
 }
 @media (max-width: 2559px) {
    #wide_screen_nab_steps{
@@ -58,6 +57,7 @@
    #steps_nav_wv_dpdf{
       display: none !important;
    }
+
 }
 
 @media(max-width: 575px){
@@ -81,11 +81,21 @@
    }
    #normal_screen_nab{
        .steps_pills{
-           .nav-item{
-               a{
-                   font-size: 12px;
-               }
-           }
+         overflow-x: auto !important;
+         flex-wrap: nowrap !important;
+         height: 50px;
+         align-items: center;
+         &::-webkit-scrollbar{
+            display: none;
+         }
+         -webkit-overflow-scrolling: touch;
+         .nav-item{
+            a{
+                  font-size: 12px;
+                  text-align: center;
+            }
+            min-width: 75px;
+         }
        }
    }
    .step_header .watch_video span {
@@ -93,6 +103,11 @@
    }
    .step_header h6{
        font-size: 14px;
+   }
+   .watch_video{
+      span{
+         display: none;
+      }
    }
 }
 
@@ -113,6 +128,6 @@
        font-size: 14px;
    }
    .step_header .watch_video span {
-       font-size: 12px;
+       font-size: 12px !important;
    }
 }

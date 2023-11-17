@@ -147,7 +147,11 @@ Array.from(document.querySelectorAll('.watch_video')).map(el => {
 
 // popup video
 document.getElementById("video_cross").onclick = ()=>{
-    document.getElementById("popup_video").classList.add("d-none");
+    document.querySelector(".video_area").classList.add("zoomOutRight");
+    // document.getElementById("popup_video").classList.add("d-none");
+    setTimeout(() => {
+        document.getElementById("popup_video").classList.add("d-none");
+    }, 400);
 }
 
 // action take on 2560 equal or upper for popup video

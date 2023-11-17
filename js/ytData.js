@@ -3,7 +3,7 @@ fetch("http://localhost/lab/youtubeAudio/", {
     "headers": {
         "Content-Type": "application/json; charset=utf-8"
     }
-    // "body": JSON.stringify()
+    // "body": JSON.stringify(sendJsonData)
 }).then(function(response){
     return response.json()
 }).then((data) => {
