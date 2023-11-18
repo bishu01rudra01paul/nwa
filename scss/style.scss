@@ -250,18 +250,59 @@ p{
     // -webkit-transform: scale3d(.475, .475, .475) translate3d(-42px, 0, 0);
     // transform: scale3d(.475, .475, .475) translate3d(-42px, 0, 0);
     top: 0;
-
+    
     
     }
     100% {
     opacity: 0;
-    width: 5%;
-    height: 5%;
+    width: 2%;
+    height: 2%;
     // -webkit-transform: scale(.1) translate3d(2000px, 0, 0);
     // transform: scale(.1) translate3d(0, 0, 0);
     // -webkit-transform-origin: right center;
     // transform-origin: right center;
-    left: 75%;
-    top: 70px;
+    left: 70%;
+    top: 50px;
+    }
+}
+
+.video_button_intro_2560{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+.pulse {
+    animation: pulse-animation 2s infinite;
+  }
+  
+  @keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgba(255, 0, 0, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(255, 0, 0, 0);
+    }
+}
+
+
+
+.dropdown_pdf_btn{
+    &:hover{
+        .donloadIcon{
+            animation: icon-down 0.5s;
+            animation-iteration-count: 2;
+        }
+    }
+}
+
+@keyframes icon-down {
+    33.3%{
+        transform: translateY(-5px);
+    }
+    66.6%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0);;
     }
 }

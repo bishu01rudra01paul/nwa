@@ -1,4 +1,4 @@
-fetch("http://localhost/lab/youtubeAudio/", {
+fetch("../youtubeData.php", {
     "method": "POST",
     "headers": {
         "Content-Type": "application/json; charset=utf-8"
