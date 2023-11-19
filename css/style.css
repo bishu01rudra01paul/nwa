@@ -11,6 +11,46 @@
 }
 
 @media (min-width: 2560px) {
+  #right_arrow img {
+    transform: rotate(90deg);
+  }
+  .navbarfixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+  }
+  .stepNavPills {
+    display: none !important;
+  }
+  .slideArows {
+    margin-top: 100px;
+  }
+  .slideArows .slideArrow {
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .slideArows .slideArrow:hover {
+    background-color: #f5e1e1;
+  }
+  .slideArows .slideIndicatior {
+    height: 3px;
+    background-color: #CCCCCC;
+  }
+  .slideArows .slideIndicatior .scrollBarMove {
+    width: 50%;
+    height: 100%;
+    background-color: red;
+    transition: all 1s;
+  }
+  .step.collapse:not(.show) {
+    display: block;
+  }
   .full_body .container .col-lg-3 {
     display: none;
   }
@@ -51,6 +91,9 @@
     display: none !important;
   }
   #steps_nav_wv_dpdf {
+    display: none !important;
+  }
+  .slideArows {
     display: none !important;
   }
 }
@@ -101,23 +144,31 @@
   }
 }
 @media (max-width: 991px) {
+  .rightSideYoutubeVideo.sticky-top {
+    position: unset;
+  }
   #top_nav {
     position: absolute;
     top: 0;
-    z-index: 1;
+    z-index: 2000;
     width: 100%;
   }
   .navbar_button {
     margin-top: 56px;
   }
   .logo {
-    z-index: 2;
+    z-index: 3000;
   }
   .step_header h6 {
     font-size: 14px;
   }
   .step_header .watch_video span {
     font-size: 12px !important;
+  }
+}
+@media (max-width: 375px) {
+  .relocation_series_page img {
+    width: 200px;
   }
 }
 body, html, * {
@@ -156,7 +207,7 @@ body, html, * {
 
 .full_body {
   background-color: #FDFDFD;
-  height: 100vh;
+  height: 100%;
 }
 
 .steps_pills .nav-link {
@@ -279,12 +330,13 @@ p {
 }
 
 #popup_video {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.5);
+  z-index: 2000;
 }
 #popup_video .video_area {
   position: absolute;
@@ -333,6 +385,7 @@ p {
 .zoomOutRight {
   -webkit-animation-name: zoomOutRight;
   animation-name: zoomOutRight;
+  -webkit-animation-duration: 0.4s;
   animation-duration: 0.4s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
@@ -384,4 +437,49 @@ p {
   100% {
     transform: translateY(0);
   }
+}
+.WatchVideoByPopup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+}
+
+.shadwo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+
+.WatchVideoByPopupPlayer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s;
+  z-index: 3000;
+}
+
+.WatchVideoByPopupCross {
+  position: absolute;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #BB0F31;
+  top: -40px;
+}
+
+.transoff {
+  transition: unset;
 }/*# sourceMappingURL=style.css.map */

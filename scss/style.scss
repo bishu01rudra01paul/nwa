@@ -43,7 +43,7 @@ body, html, *{
 
 .full_body{
     background-color: $body_color;
-    height: 100vh;
+    height: 100%;
 }
 // Nav pills for steps
 
@@ -180,12 +180,13 @@ p{
 }
 
 #popup_video{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.5);
+    z-index: 2000;
     .video_area{
         position: absolute;
         top: 50%;
@@ -239,7 +240,7 @@ p{
 .zoomOutRight {
     -webkit-animation-name: zoomOutRight;
     animation-name: zoomOutRight;
-    // -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 0.4s;
     animation-duration: 0.4s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
@@ -305,4 +306,47 @@ p{
     100%{
         transform: translateY(0);;
     }
+}
+
+
+.WatchVideoByPopup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+}
+.shadwo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+.WatchVideoByPopupPlayer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40%;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s;
+    z-index: 3000;
+}
+.WatchVideoByPopupCross{
+    position: absolute;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #BB0F31;
+    top: -40px;
+}
+.transoff{
+    transition: unset;
 }
