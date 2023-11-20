@@ -1,4 +1,7 @@
 @media (min-width: 2560px) {
+  html {
+    scroll-padding-top: var(--scroll-padding, 200px);
+  }
   #right_arrow img {
     transform: rotate(90deg);
   }

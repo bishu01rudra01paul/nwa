@@ -21,29 +21,6 @@ Array.from(cardHeader).map(el =>{
     }
 })
 }
-// active steps with click
-Array.from(document.querySelectorAll(".steps_pills .nav-item > a")).map(el => {
-    el.onclick = ()=>{
-        console.log(el.innerHTML.split(" ").join(""));
-        document.documentElement.scrollTo = document.getElementById(`${el.innerHTML.split(" ").join("")}`).offsetTop-130
-        
-        Array.from(document.querySelectorAll(".steps_pills .nav-item > a")).map(el => {
-           el.classList.remove("active");
-        })
-        el.classList.add("active");
-        // highlight border of step body when click
-        const startIndex = el.href.indexOf("#")+1
-        const lastIndex = el.href.length
-        const highliteId = el.href.slice(startIndex, lastIndex)
-        
-        document.getElementById(highliteId).style.border = "1px solid red";
-        document.getElementById(highliteId).lastElementChild.classList.add("show");
-
-        setTimeout(() => {
-            document.getElementById(highliteId).removeAttribute("style")
-        }, 2000);
-    }
-})
 
 // windwo resize functions
 window.onresize = ()=>{
@@ -174,11 +151,7 @@ document.querySelector(".navbar-toggler").onclick = ()=>{
 }
 
 
-// Array.from(document.querySelectorAll('.watch_video')).map(el => {
-//     el.onclick = ()=>{
-//         document.getElementById("popup_video").classList.remove("d-none");
-//     }
-// })
+
 
 ///////////////////////////////////////////////////////////////////////////
 // action take on 2560 equal or upper for popup video
@@ -281,4 +254,45 @@ document.querySelector(".WatchVideoByPopupCross").onclick = ()=>{
 document.querySelector(".introwatch_video").onclick = ()=>{
     document.querySelector(".video_area").classList.remove("zoomOutRight")
     document.getElementById("popup_video").classList.remove("d-none");
+}
+
+
+
+// lower 2560
+function stepBtnToMoveCon(el, id){
+    
+    Array.from(document.querySelectorAll(".steps_pills .nav-item > a")).map(el => {
+        if(el.classList.contains("active")){
+            el.classList.remove("active")
+        }
+    })
+
+    document.documentElement.scrollTop = document.getElementById(id).offsetTop-60
+
+
+    el.classList.add("active")
+    document.getElementById(id).style.border = "1px solid #BB0F31";
+    document.getElementById(id).lastElementChild.classList.add("show")
+    setTimeout(() => {
+            document.getElementById(id).removeAttribute("style")
+    }, 2000);
+    
+}
+//upper 2560
+function stepBtnToMoveConUpScreen(el, id){
+    Array.from(document.querySelectorAll(".steps_pills .nav-item > a")).map(el => {
+        if(el.classList.contains("active")){
+            el.classList.remove("active")
+        }
+    })
+
+    document.getElementById(id).scrollIntoView(true)
+    document.documentElement.style.setProperty('--scroll-padding', document.querySelector(".navbarfixed").offsetHeight+"px")
+
+    el.classList.add("active")
+    document.getElementById(id).style.border = "1px solid #BB0F31";
+    document.getElementById(id).lastElementChild.classList.add("show")
+    setTimeout(() => {
+            document.getElementById(id).removeAttribute("style")
+    }, 2000);
 }

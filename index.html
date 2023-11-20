@@ -61,22 +61,22 @@
                         <div id="wide_screen_nab_steps">
                             <ul class="nav nav-pills steps_pills" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active rounded-pill text-capitalize" href="#step1">step 1</a>
+                                    <a class="nav-link active rounded-pill text-capitalize" onclick="stepBtnToMoveConUpScreen(this, 'step1')">step 1</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link rounded-pill text-capitalize"  href="#step2">step 2</a>
+                                    <a class="nav-link rounded-pill text-capitalize"  onclick="stepBtnToMoveConUpScreen(this, 'step2')">step 2</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link rounded-pill text-capitalize"  href="#step3">step 3</a>
+                                    <a class="nav-link rounded-pill text-capitalize"  onclick="stepBtnToMoveConUpScreen(this, 'step3')">step 3</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link rounded-pill text-capitalize"  href="#step4">step 4</a>
+                                    <a class="nav-link rounded-pill text-capitalize"  onclick="stepBtnToMoveConUpScreen(this, 'step4')">step 4</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link rounded-pill text-capitalize"  href="#step5">step 5</a>
+                                    <a class="nav-link rounded-pill text-capitalize"  onclick="stepBtnToMoveConUpScreen(this, 'step5')">step 5</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link rounded-pill text-capitalize"  href="#step6">step 6</a>
+                                    <a class="nav-link rounded-pill text-capitalize"  onclick="stepBtnToMoveConUpScreen(this, 'step6')">step 6</a>
                                 </li>
                             </ul>
                         </div>
@@ -106,22 +106,22 @@
                             <div id="normal_screen_nab">
                                 <ul class="nav nav-pills steps_pills" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active rounded-pill text-capitalize" href="#step1">step1</a>
+                                        <a class="nav-link active rounded-pill text-capitalize" onclick="stepBtnToMoveCon(this, 'step1')">step 1</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link rounded-pill text-capitalize"  href="#step2">step 2</a>
+                                        <a class="nav-link rounded-pill text-capitalize" onclick="stepBtnToMoveCon(this, 'step2')">step 2</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link rounded-pill text-capitalize"  href="#step3">step 3</a>
+                                        <a class="nav-link rounded-pill text-capitalize" onclick="stepBtnToMoveCon(this, 'step3')" >step 3</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link rounded-pill text-capitalize"  href="#step4">step 4</a>
+                                        <a class="nav-link rounded-pill text-capitalize" onclick="stepBtnToMoveCon(this, 'step4')">step 4</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link rounded-pill text-capitalize"  href="#step5">step 5</a>
+                                        <a class="nav-link rounded-pill text-capitalize" onclick="stepBtnToMoveCon(this, 'step5')">step 5</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link rounded-pill text-capitalize"  href="#step6">step 6</a>
+                                        <a class="nav-link rounded-pill text-capitalize" onclick="stepBtnToMoveCon(this, 'step6')">step 6</a>
                                     </li>
                                 </ul>
                             </div>
@@ -183,18 +183,33 @@
                                                                     <p>
                                                                         Determine your budget, considering both your down payment and monthly expenses. Also take into account HOA fees, utilities, and property taxes.
                                                                     </p>
+                                                                    <div class="external_link mb-4">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" href="https://www.mortgagenwa.com/mortgage-calculators/?calc="> Mortgage Calculator</a>
+                                                                    </div>
                                                                     <div class="sub_itemofitemofitems ms-4 ps-4 py-2">
                                                                         <div class="sub_itemofitemofitem">
                                                                             <h2>Buying</h2>
                                                                             <p>
                                                                                 Buying - There are a million home search websites that will give you an idea of the prices sellers are asking for homes, but don’t rely on them to be accurate when it comes to their Estimates. For example, on Zillow’s website, they state that the Zestimate is within 5% of the sales price only 77% of the time. If you are searching for homes in Northwest Arkansas, you can use HomeSearch.NaturallyNWA.com to check out all of the properties for sale in NWA.
                                                                             </p>
+                                                                            <div class="external_link mb-4">
+                                                                                <span class="external_title">External Link :</span>
+                                                                                <a class="text-capitalize" href="https://www.facebook.com/marketplace/107672219256164/propertyrentals/?exact=false">naturallynwa</a>
+                                                                                <a class="text-capitalize" href="http://www.zillow.com">zillow</a>
+                                                                                <a class="text-capitalize" href="http://www.zillow.com">realtor</a>
+                                                                            </div>
                                                                         </div>
                                                                         <div class="sub_itemofitemofitem">
                                                                             <h2>Renting</h2>
-                                                                            <p class="mb-0">
+                                                                            <p class="mb-3">
                                                                                 Renting - Unfortunately, a lot of the best rentals never get advertised online or listed with a real estate agent, because the landlords can just stick a sign in the yard and have it rented the next day. If you are limited to searching online, Craigslist and FaceBook Marketplace are probably the best places to find desirable rental properties.
                                                                             </p>
+                                                                            <div class="external_link">
+                                                                                <span class="external_title">External Link :</span>
+                                                                                <a class="text-capitalize" href="https://fayar.craigslist.org/search/apa#search=1~gallery~0~0">Craigslist Rentals in Northwest Arkansas</a>
+                                                                                <a class="text-capitalize" href="https://www.facebook.com/marketplace/107672219256164/propertyrentals/?exact=false">FaceBook Marketplace Rentals in Northwest Arkansas</a>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
