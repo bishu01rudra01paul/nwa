@@ -224,8 +224,8 @@ p{
 .viewCount{
     background-color: #EEEEEE;
 }
-#category{
-    font-size: 12px;
+.category{
+    font-size: 13px;
     font-weight: bold;
     color: #909090;
     margin-left: 20px;
@@ -367,5 +367,16 @@ p{
     }
     a{
         font-size: 13px;
+    }
+}
+
+// map button
+.mapBtn{
+    &:hover{
+        background-color: #BB0F31;
+        border-color: #fff;
+        img{
+            content: url('../images/map.png');
+        }
     }
 }
