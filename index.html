@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nwa</title>
+    <title>NWA</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -24,22 +25,22 @@
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Everything Relocation</a>
+                            <a class="nav-link" href="https://www.naturallynwa.com/relocation/" target="_blank">Everything Relocation</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Relocation Series</a>
+                            <a class="nav-link" href="https://www.naturallynwa.com/about-eric/" target="_blank">Relocation Series</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">About Eric</a>
+                            <a class="nav-link" href="https://www.naturallynwa.com/nwa-tv/" target="_blank">About Eric</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">NaturallyNWA TV</a>
+                            <a class="nav-link" href="https://www.naturallynwa.com/nwa-tv/" target="_blank">NaturallyNWA TV</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Search For Homes</a>
+                            <a class="nav-link" href="https://homesearch.naturallynwa.com/" target="_blank">Search For Homes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Contact Eric</a>
+                            <a class="nav-link" href="https://www.naturallynwa.com/contact-eric/" target="_blank">Contact Eric</a>
                         </li>
                     </ul>
                     <div class="d-flex align-items-center py-3 py-lg-0">
@@ -59,9 +60,12 @@
                         </div>
                         <!-- <div id="wide_screen_nab"></div> -->
                         <div id="wide_screen_nab_steps">
-                            <ul class="nav nav-pills steps_pills" role="tablist">
+                            <ul class="nav nav-pills steps_pills" role="tablist" id="navbar-example2" >
                                 <li class="nav-item">
-                                    <a class="nav-link active rounded-pill text-capitalize" onclick="stepBtnToMoveConUpScreen(this, 'step1')" data-step-wdId="step1">step 1</a>
+                                    <a  class="nav-link active rounded-pill text-capitalize" onclick="stepBtnToMoveConUpScreen(this, 'step0')" data-step-wdId="step0">Intro</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link rounded-pill text-capitalize" onclick="stepBtnToMoveConUpScreen(this, 'step1')" data-step-wdId="step1">step 1</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link rounded-pill text-capitalize"  onclick="stepBtnToMoveConUpScreen(this, 'step2')" data-step-wdId="step2">step 2</a>
@@ -81,15 +85,14 @@
                             </ul>
                         </div>
                         <div id="steps_nav_wv_dpdf" class="d-flex">
-                            <button class="btn text-capitalize rounded-pill introwatch_video d-flex align-items-center">
+                            <button class="btn text-capitalize rounded-pill introwatch_video d-flex align-items-center" onclick="document.getElementById('ytVideoId').value='r7Z08hgGfKc'; stepWatchVideo(this)">
                                 <div class="video_button_intro_2560 "><img src="images/video_button.png" alt=""></div>
-                                <span class="ms-2 red_color fw-bold">watch video</span>
+                                <span class="ms-2 red_color fw-bold">intro</span>
                             </button>
-                            <button id="download_btn_pdf" class="ms-4 btn bg_red w-100 d-flex justify-content-around align-items-center text-white font-weight-bold mt-3">
-                                <img src="images/pdf-icon download.png" alt="">
-                                <span>Download PDF</span>
-                                <img src="images/download icon.png" alt="">
-                            </button>
+                            <a class="download_btn_pdf dn_btn ms-4 btn bg_red d-flex justify-content-around align-items-center text-white font-weight-bold mt-3 dropdown_pdf_btn" href="pdf/Naturally_NWA_pdf_Nov 30,2023.pdf" download>
+                                <img class="donloadIcon" src="images/download icon.png" alt="">
+                                <span class="ms-2">PDF</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -106,7 +109,10 @@
                             <div id="normal_screen_nab">
                                 <ul class="nav nav-pills steps_pills" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active rounded-pill text-capitalize" onclick="stepBtnToMoveCon(this, 'step1')" data-step-id="step1">step 1</a>
+                                        <a class="nav-link active rounded-pill text-capitalize" onclick="stepBtnToMoveCon(this, 'step0')" data-step-id="step0">Intro</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link rounded-pill text-capitalize" onclick="stepBtnToMoveCon(this, 'step1')" data-step-id="step1">step 1</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link rounded-pill text-capitalize" onclick="stepBtnToMoveCon(this, 'step2')" data-step-id="step2">step 2</a>
@@ -135,10 +141,50 @@
                         <!-- <div class="slideIndicatior w-100"><div class="scrollBarMove"></div></div> -->
                         <div onclick="slideHorizontal('rightArrow')" class="slideRightArrow ms-4 slideArrow d-flex justify-content-center align-items-center"><img src="images/rightArrow.png" alt=""></div>
                     </div>
-                    <div class="col-lg-9 order-2 order-lg-1">
+                    <div class="col-md-12 pdfWebFormatArea col-md-12 order-2">
                         <div class="tab-content">
                             <div class="tab-pane active"><br>
                                 <div id="accordion" class="collapsible_item">
+                                    <div class="card" id="step0">
+                                        <div class="card-header" href="#item0" data-bs-toggle="collapse">
+                                            <div class="step_header row align-items-center">
+                                                <div class="col-6">
+                                                    <div class="step_number mb-2">Intro</div>
+                                                    <h6 class="text-uppercase">What to expect when relocating</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="d-flex align-items-center justify-content-end">
+                                                        <div class="me-lg-3 me-1">
+                                                            <!-- onclick="document.getElementById('ytVideoId').value='Wh12Sy3kyXE'; stepWatchVideo(this, ['Wh12Sy3kyXE', '2v3AzESqKLA'])" -->
+                                                            <button  class="btn text-capitalize rounded-pill watch_video d-flex align-items-center" data-video-id="Wh12Sy3kyXE"><img src="images/video_button.png" alt=""><span class="ms-1 ms-md-2">watch video</span></button>
+                                                        </div>
+                                                        <div class="me-lg-5 me-2">
+                                                            <a class="pdf_circle_dn rounded-circle" href="#"><img src="images/pdf.png" alt=""></a>
+                                                        </div>
+                                                        <div id="right_arrow">
+                                                            <img src="images/right_arrow.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="item0" class="collapse show step" data-bs-parent="#accordion">
+                                            <!-- ===================category=================== -->
+                                            <div class="category pt-3"></div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h6 class="text-capitalize videoTitle mb-3">The Process Overview</h6>
+                                                        <iframe class="embedVideo" id="playerEmbed" type="text/html" width="100%" height="390" src="https://www.youtube.com/embed/Wh12Sy3kyXE?si=m5JeR5oM8tHfXVs3" frameborder="0"></iframe>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <h6 class="text-capitalize videoTitle mb-3">What to expect</h6>
+                                                        <iframe class="embedVideo" id="playerEmbed" type="text/html" width="100%" height="390" src="https://www.youtube.com/embed/2v3AzESqKLA?si=tCPb23z3e-Ci5MP4" frameborder="0"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="card" id="step1">
                                         <div class="card-header" href="#item1" data-bs-toggle="collapse">
                                             <div class="step_header row align-items-center">
@@ -152,7 +198,7 @@
                                                             <button class="btn text-capitalize rounded-pill watch_video d-flex align-items-center"><img src="images/video_button.png" alt=""><span class="ms-1 ms-md-2">watch video</span></button>
                                                         </div>
                                                         <div class="me-lg-5 me-2">
-                                                            <a class="pdf_circle_dn rounded-circle" href="#"><img src="images/pdf.png" alt=""></a>
+                                                            <a class="pdf_circle_dn rounded-circle" href="pdf/Naturally_NWA_pdf_Step 1.pdf" download data-bs-toggle="tooltip" data-bs-placement="bottom" title="Download PDF"><img src="images/pdf.png" alt=""></a>
                                                         </div>
                                                         <div id="right_arrow">
                                                             <img src="images/right_arrow.png" alt="">
@@ -161,7 +207,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="item1" class="collapse show step" data-bs-parent="#accordion">
+                                        <div id="item1" class="collapse step" data-bs-parent="#accordion">
                                             <!-- ===================category=================== -->
                                             <div class="category pt-3">Initial research</div>
                                             <div class="card-body">
@@ -185,7 +231,7 @@
                                                                     </p>
                                                                     <div class="external_link mb-4">
                                                                         <span class="external_title">External Link :</span>
-                                                                        <a class="text-capitalize" href="https://www.mortgagenwa.com/mortgage-calculators/?calc="> Mortgage Calculator</a>
+                                                                        <a class="text-capitalize" href="https://www.mortgagenwa.com/mortgage-calculators/?calc=" target="_blank"> Mortgage Calculator</a>
                                                                     </div>
                                                                     <div class="sub_itemofitemofitems ms-4 ps-4 py-2">
                                                                         <div class="sub_itemofitemofitem">
@@ -195,9 +241,9 @@
                                                                             </p>
                                                                             <div class="external_link mb-4">
                                                                                 <span class="external_title">External Link :</span>
-                                                                                <a class="text-capitalize" href="https://www.facebook.com/marketplace/107672219256164/propertyrentals/?exact=false">naturallynwa</a>
-                                                                                <a class="text-capitalize" href="http://www.zillow.com">zillow</a>
-                                                                                <a class="text-capitalize" href="http://www.zillow.com">realtor</a>
+                                                                                <a class="text-capitalize" href="http://www.homesearch.naturallynwa.com" target="_blank">naturallynwa</a>
+                                                                                <a class="text-capitalize" href="http://www.zillow.com" target="_blank">zillow</a>
+                                                                                <a class="text-capitalize" href="http://www.realtor.com/" target="_blank">realtor</a>
                                                                             </div>
                                                                         </div>
                                                                         <div class="sub_itemofitemofitem">
@@ -207,8 +253,8 @@
                                                                             </p>
                                                                             <div class="external_link">
                                                                                 <span class="external_title">External Link :</span>
-                                                                                <a class="text-capitalize" href="https://fayar.craigslist.org/search/apa#search=1~gallery~0~0">Craigslist Rentals in Northwest Arkansas</a>
-                                                                                <a class="text-capitalize" href="https://www.facebook.com/marketplace/107672219256164/propertyrentals/?exact=false">FaceBook Marketplace Rentals in Northwest Arkansas</a>
+                                                                                <a class="text-capitalize" href="https://fayar.craigslist.org/search/apa" target="_blank">Craigslist Rentals in Northwest Arkansas</a>
+                                                                                <a class="text-capitalize" href="https://www.facebook.com/marketplace/107672219256164/propertyrentals/?exact=false" target="_blank">FaceBook Marketplace Rentals in Northwest Arkansas</a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -227,17 +273,18 @@
                                                                     </p>
                                                                     <div class="external_link">
                                                                         <span class="external_title">External Link :</span>
-                                                                        <a class="btn btn-outline-secondary text-capitalize mapBtn" href="#"><img class="me-2" src="images/mapicon.png" alt="map"> rogers</a>
-                                                                        <a class="text-capitalize" href="https://nwacouncil.org/2022/07/22/northwest-arkansas-council-unveils-five-year-strategic-plan/">NWA Council 5 Year Plan</a>
-                                                                        <a class="text-capitalize" href="https://www.nwarpc.org/wp-content/uploads/2018/08/2035-NWA-Transportation-Plan.pdf">2035 NWA Regional Transportation Plan</a>
-                                                                        <a class="text-capitalize" href="https://www.bentonvillear.com/1569/Regional-Plans">Bentonville Planning Website</a>
-                                                                        <a class="text-capitalize" href="https://www.rogersar.gov/482/Planning-Commission">Rogers Planning Website</a>
-                                                                        <a class="text-capitalize" href="https://www.fayetteville-ar.gov/3086/Master-Plans">Fayetteville Planning Website</a> 
-                                                                        <a class="text-capitalize" href="https://www.springdalear.gov/page/planning-commission">Springdale Planning Website</a> 
-                                                                        <a class="text-capitalize" href="https://www.siloamsprings.com/167/Planning-CommissionBoard-of-Adjustment">Siloam Springs Planning Website</a> 
-                                                                        <a class="text-capitalize" href="https://www.bellavistaar.gov/city_departments/community_development/planning/index.php">Bella Vista Planning Website</a> 
-                                                                        <a class="text-capitalize" href="https://www.springdalear.gov/page/planning-commission">Springdale Planning Website</a> 
-                                                                        <a class="text-capitalize" href="https://www.siloamsprings.com/167/Planning-CommissionBoard-of-Adjustment">Siloam Springs Planning Website</a> 
+                                                                        <a class="btn btn-outline-secondary text-capitalize mapBtn" target="_blank" href="https://www.google.com/maps/place/Rogers,+AR/@36.3346074,-94.2480738,12z/data=!3m1!4b1!4m6!3m5!1s0x87c910d451c1567d:0xce19becf5373f4d4!8m2!3d36.3335129!4d-94.1256953!16zL20vMHFycnA?entry=ttu"><img class="me-2" src="images/mapicon.png" alt="map"> rogers</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://nwacouncil.org/2022/07/22/northwest-arkansas-council-unveils-five-year-strategic-plan/">NWA Council 5 Year Plan</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.nwarpc.org/wp-content/uploads/2018/08/2035-NWA-Transportation-Plan.pdf">2035 NWA Regional Transportation Plan</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.bentonvillear.com/1569/Regional-Plans">Bentonville Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.rogersar.gov/482/Planning-Commission">Rogers Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.fayetteville-ar.gov/3086/Master-Plans">Fayetteville Planning Website</a> 
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.springdalear.gov/page/planning-commission">Springdale Planning Website</a> 
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.bellavistaar.gov/city_departments/community_development/planning/index.php">Bella Vista Planning Website</a> 
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.siloamsprings.com/167/Planning-CommissionBoard-of-Adjustment">Siloam Springs Planning Website</a> 
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.cityoffarmingtonar.com/PlanningCommission.aspx">Farmington Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.prairiegrovearkansas.org/bc-pc">Prairie Grove Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://cityofpearidge.com/planning/">Pea Ridge Planning Website</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -261,18 +308,46 @@
                                                                     <p>
                                                                         Look at the availability and cost of utilities like water, electricity, natural gas, and internet/cable services. City websites will typically provide a list of utility companies, and then you can contact the utility companies directly to get the most accurate information, but their websites will have rate information and details about basic service charges, usage rates and tiered pricing.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.bentonvillear.com/565/Utility-Service">Bentonville Utility Information</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.rwu.org/">Rogers Water Utility Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.fayetteville-ar.gov/419/Water-Service-and-Billing">Fayetteville Water Department</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://springdale.com/utilities/">Springdale Utility Information</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.siloamsprings.com/300/Utility-Services">iloam Springs Utility Information</a> 
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.bellavistaar.gov/residents/utilities/index.php">Bella Vista Utility Information</a> 
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.cityoffarmingtonar.com/PublicUtilities.aspx">Farmington Utility Information</a> 
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.prairiegrovearkansas.org/publicworks">Prairie Grove Utility Information</a> 
+                                                                        <a class="text-capitalize" target="_blank" href="https://cityofpearidge.com/utilities/">Pea Ridge Utility Information</a> 
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2>Grocery Prices</h2>
                                                                     <p>
                                                                         Grocery prices are a significant indicator of the overall cost of living in an area. A locale with high food prices might also have higher costs for other goods and services. Most of the major grocery chains have apps or websites that will allow you to browse selections and prices. You can also use apps like Instacart or Amazon Fresh to provide prices from various stores in an area, or price comparison websites like MySupermarket.com or Basket.com to compare prices across multiple supermarkets in an area.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.amazon.com/fmc/m/30003175?almBrandId=QW1hem9uIEZyZXNo">Amazon Fresh</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.instacart.com/?utm_medium=sem&&utm_source=instacart_google&&utm_campaign=ad_demand_search_brand_us-na-catchall_exact_us_AUDACT&&utm_content=accountid-1732890876_campaignid-10023670317_adgroupid-102598077042_device-c_adid-548570220442_network-g&&utm_term=matchtype-e_keyword-instacart_targetid-aud-452760955638:kwd-297369219725_locationid-9026055&&kskwid=1532524&&ksadid=&&gad_source=1&&gclid=CjwKCAiA9dGqBhAqEiwAmRpTC6eXTqYEar2rrImXd1GhKfKwNLT-LGbfA_8blKzzwpfbeCOHhe330hoClkwQAvD_BwE">Instacart</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.walmart.com/cp/food/976759">Walmart Grocery</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.wholefoodsmarket.com/shop/choose?utm_source=paidgoogle&&utm_medium=paidsearch&&utm_campaign=Estore_B2BCatering_Brand&&utm_content=paid_global&&gclid=CjwKCAiA9dGqBhAqEiwAmRpTC39ItKoFWdrKyTyhWPlt_KtXojmjIgY9yFR6zbr4ADeUmJOpBS3cixoCVGsQAvD_BwE">Whole Foods</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.naturalgrocers.com/">Natural Grocers</a> 
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.aldi.us/">Aldi</a> 
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.harpsfood.com/">Harps Grocery - Northwest Arkansas Regional Chain</a>  
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2>Transportation Costs</h2>
                                                                     <p>
                                                                         If you have a personal vehicle, you’ll want to know the fuel costs, costs of parking, average vehicle maintenance costs, annual costs for registration and licensing, and car insurance rates. The State Department of Transportation websites can have information on tolls, gas prices, and infrastructure costs. AAA can provide information on the average cost of owning and operating a vehicle in a particular region, and there are multiple fuel price checker apps and websites available for understanding the costs associated with driving.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.ardot.gov/">Arkansas Department of Transportation</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.ace.aaa.com/?zip=72703&&stateprov=ar&&city=fayetteville&&devicecd=PC">AAA</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.gasbuddy.com/">Gas Price Checker</a>
+                                                                    </div>
                                                                 </div>
                                                                 <!-- ===========================Taxes========================== -->
                                                                 <div class="sub_itemofitem mb-4">
@@ -281,23 +356,36 @@
                                                                         National and Regional tax authority websites (Like the IRS) are the primary source for tax rates and regulation. For state or county-specific taxes such as sales tax, income tax and property tax information, check the state and city government websites. There are also online calculators available for estimating taxes based on a location. 
                                                                     </p>
                                                                     <div class="sub_itemofitemofitems ms-4 ps-4 py-2">
-                                                                        <div class="sub_itemofitemofitem">
+                                                                        <div class="sub_itemofitemofitem mb-4">
                                                                             <h2>Income</h2>
                                                                             <p>
                                                                                 some states or counties have their own income taxes, and there could be an income tax levied by the city.
                                                                             </p>
+                                                                            <div class="external_link">
+                                                                                <span class="external_title">External Link :</span>
+                                                                                <a class="text-capitalize" target="_blank" href="https://www.adp.com/resources/tools/calculators/states/arkansas-salary-paycheck-calculator.aspx">Arkansas Paycheck Calculator</a>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="sub_itemofitemofitem">
+                                                                        <div class="sub_itemofitemofitem mb-4">
                                                                             <h2>Property</h2>
                                                                             <p>
                                                                                 Property - learn the rates and assessment procedures for residential properties, and understand the possible exemptions, deductions, or rebates, as well as how often properties are reassessed and the history of rate increases.
                                                                             </p>
+                                                                            <div class="external_link">
+                                                                                <span class="external_title">External Link :</span>
+                                                                                <a class="text-capitalize" target="_blank" href="https://www.arcountydata.com/index.asp">Benton County Tax Record</a>
+                                                                                <a class="text-capitalize" target="_blank" href="https://www.actdatascout.com/RealProperty/Arkansas/Washington">Washington County Tax Record</a>
+                                                                            </div>
                                                                         </div>
                                                                         <div class="sub_itemofitemofitem">
                                                                             <h2>Sales</h2>
                                                                             <p>
                                                                                 Learn the rates and what goods and services it applies to, as well as any additional city sales taxes that are required. Also understand if there are any tax exemptions on certain goods or services in an area.
                                                                             </p>
+                                                                            <div class="external_link">
+                                                                                <span class="external_title">External Link :</span>
+                                                                                <a class="text-capitalize" target="_blank" href="https://www.avalara.com/taxrates/en/state-rates/arkansas.html">Arkansas Tax Rates By City</a>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -322,18 +410,35 @@
                                                                     <p>
                                                                         Determine which industries or sectors are strong in that area and identify the largest employers in the area. Look at whether the local job market is expanding, contracting, or stable. Local news
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.discover.arkansas.gov/_docs/Publications/Economic-Report-OCI/Economic-Report.pdf">2023 Arkansas Labor Market & Economic Report</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2>Average Salary and Wage information</h2>
                                                                     <p>
                                                                         Determine which industries or sectors are strong in that area and identify the largest employers in the area. Look at whether the local job market is expanding, contracting, or stable. Local news
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="http://www.glassdoor.com/">GlassDoor.com</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.payscale.com/">PayScale.com</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.bls.gov/">Bureau of Labor Statistics</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2>Employment agencies or Job Fairs</h2>
                                                                     <p>
                                                                         Identify reputable staffing or recruitment agencies that cater to your profession or industry. Also search for upcoming job or career fairs where you can network, submit resumes and get a feel for the local job market in person.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://csarecruiters.com/">Cameron Smith & Associates</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.pinnacleexecutiverecruiters.com/">Pinnacle Executive Recruiters</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://stoutexecutivesearch.com/">Stout Executive Search</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.roberthalf.com/us/en/locations/ar-fayetteville/438-east-millsap-rd">Robert Half Fayetteville Office</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -355,18 +460,37 @@
                                                                     <p>
                                                                         Use sources like GreatSchools.com, SchoolDigger.com, or the National Center for Education Statistics to get an idea of school rankings based on standardized test scores and other factors.  Review the types of courses offered, including Advanced Placement (AP) or International Baccalaureate (IB) programs, and investigate the variety and quality of sports, clubs, and other after-school activities. For families with children requiring additional support, look into the availability and quality of special education programs. Research the quality of physical facilities like libraries, gyms, science labs, and arts facilities.  You’ll also want to get an idea of the class sizes, as smaller class sizes often lead to more personalized attention for students.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.greatschools.org/">GreatSchools.org</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.schooldigger.com/">SchoolDigger.com</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://nces.ed.gov/">National Center For Education Statistics</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2>Higher Education Institutions</h2>
                                                                     <p>
                                                                         Identify prominent institutions in the area, their specialities, and reputations. Community Colleges can offer more affordable education options and often provide community-focused courses and programs.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.uark.edu/">University of Arkansas</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.nwacc.edu/">Northwest Arkansas Community College</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.jbu.edu/">John Brown University</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2>Adult Education or vocational training centers</h2>
                                                                     <p>
                                                                         Identify schools or centers offering training in specific trades or vocations . Some vocational centers have direct affiliations with industries, offering a pathway to employment after training.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.nwacc.edu/adulteducation/ourprograms/">Adult Education Programs at NWACC</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://district.fayar.net/page/adult-community-education">Adult Education Programs in Fayetteville</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://nwti.edu/arkansas-adult-education/">Adult Education Programs - Northwest Technical Institute</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://dws.arkansas.gov/adult-education/">Adult Education - Arkansas Division of Workforce Services</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -388,12 +512,30 @@
                                                                     <p>
                                                                         If you rely on public transportation, you’ll want to know the extent of the coverage offered in your new area, as well as transit fares
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.ozark.org/">Ozark Regional Transit</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2>Major highways and traffic conditions</h2>
                                                                     <p>
                                                                         Major highways and traffic conditions - Evaluate how close major highways are to your prospective home and workplace. Research the number of entry and exit points, and if they’re conveniently located for your needs. Look into the general condition of the highways, and understand if there are upcoming plans for highway expansions, new constructions, or major repairs which might influence traffic. Check out the accident rates in an area and alternate routes in case of highway closures or heavy traffic. Determine if there are toll roads on your regular routes and understand the cost implications. Do these tolls take cash or do they require electronic transponders? Some good resources for this are Google Maps, Waze, Local Department of Transportation (DOT) websites, Local News Outlets, City or Regional Planning Websites, and community forums or Social Media.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.ardot.gov/">Arkansas Department of Transportation</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.nwarpc.org/wp-content/uploads/2018/08/2035-NWA-Transportation-Plan.pdf">2035 NWA Regional Transportation Plan</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.bentonvillear.com/1569/Regional-Plans">Bentonville Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.rogersar.gov/482/Planning-Commission">Rogers Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.fayetteville-ar.gov/3086/Master-Plans">Fayetteville Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.springdalear.gov/page/planning-commission">Springdale Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.siloamsprings.com/167/Planning-CommissionBoard-of-Adjustment">Siloam Springs Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.bellavistaar.gov/city_departments/community_development/planning/index.php">Bella Vista Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.cityoffarmingtonar.com/PlanningCommission.aspx">Farmington Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.prairiegrovearkansas.org/bc-pc">Prairie Grove Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://cityofpearidge.com/planning/">Pea Ridge Planning Website</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2>Availability of parking</h2>
@@ -409,6 +551,10 @@
                                                                     <p>
                                                                         If you are a frequent flyer, you’ll want to know the costs and frequencies of flights from the local airport.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.flyxna.com/non-stop-flights-from-xna?gad_source=1&&gclid=Cj0KCQiAmNeqBhD4ARIsADsYfTc5BZYkapc5UtmeAf4DHMZgxod0DVo8C2UD8U17bDBCAM5htQgCjs4aAvM6EALw_wcB"> Northwest Arkansas National Airport</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -442,6 +588,17 @@
                                                                     <p>
                                                                         research both national and regional health insurance providers to gauge their reputations. Ensure potential hospitals and doctors fall within the insurance’s coverage network to avoid high out-of-network costs. Learn what types of plans are available such as HMO, PPO, or EPO, to find the best fit based on cost and flexibility.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.healthgrades.com/">HealthGrades.com</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.ratemds.com/">RateMDs.com</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.wregional.com/">Washington Regional Hospital - Fayetteville</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.mercy.net/practice/mercy-hospital-northwest-arkansas/">Mercy Hospital - Rogers</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.northwesthealth.com/nmc-bentonville">Northwest Hospital Bentonvllle</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.northwesthealth.com/nmc-springdale">Northwest Hospital Springdale</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://uamshealth.com/location/arkansas-childrens-northwest/">Arkansas Children's Hospital - Springdale</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.va.gov/fayetteville-arkansas-health-care/">VA Hospital - Fayetteville</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -463,6 +620,19 @@
                                                                     <p>
                                                                         Compare local crime rates to regional and national averages, as well as your current city. Focus on both violent and property crime statistics to get a comprehensive view. Additionally, obtain a breakdown of specific types of crimes prevalent in the area, such as burglaries vs vehicle thefts. Monitor trends to discern whether crime rates have been rising, stable, or decreasing over the years. Useful resources for this research include the FBI’s Uniform Crime Reporting Program, local police department websites, and crime mapping services like CrimeReports.com or NeighborhoodScout.com.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.neighborhoodscout.com/">Neighborhood Scout</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.bentonvillear.com/342/Police-Department">Bentonville Police Department</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.fayetteville-ar.gov/4081/Police-Department">Fayetteville Police Department</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.rogersar.gov/279/Police-Department">Rogers Police Department</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.bellavistaar.gov/city_departments/police/index.php">Bella Vista Police Department</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.springdalear.gov/o/spd">Springdale Police Department</a>
+                                                                        <a class="text-capitalize" target="_blank" href="http://www.lowellarkansas.gov/mobile/departments/police-department/">Lowell Police Department</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.siloamsprings.com/205/Police">Siloam Springs Police Department</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.washingtoncountyar.gov/government/departments-f-z/sheriff">Washington County Sheriff's Office</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://sheriff.bentoncountyar.gov/">Benton County Sheriff's Office</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2>Local police and fire departments</h2>
@@ -475,6 +645,10 @@
                                                                     <p>
                                                                         Explore the activities they undertake, such as regular meetings, patrols, or community training sessions, and evaluate their reported impact on local safety. The National Neighborhood Watch, community centers, and local libraries can provide insight into existing programs, their initiatives, and effectiveness in bolstering community safety.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://nextdoor.com/">NextDoor.com</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -496,24 +670,58 @@
                                                                     <p>
                                                                         Seek out green spaces of various sizes that are suitable for relaxation, exercise, or family outings. Investigate outdoor activities available, such as hiking trails, biking paths, and water sports facilities. Check for amenities within parks like playgrounds, sports courts, or picnic areas. Local municipality websites, trail platforms like AllTrails.com, and tourism sites are great resources for this research.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.alltrails.com/">AllTrails.com</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.thejonescenter.net/razorback-greenway?gclid=CjwKCAiAu9yqBhBmEiwAHTx5py9XZgPhuh3PPX1IjMtRcr4MX3rvIe0gOzZXrrS4yrVHeb5P9lKcoRoCaxoQAvD_BwE">Razorback Greenway Map</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.oztrails.com/trail-locations/">Northwest Arkansas Mountain Bike Trails</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.experiencefayetteville.com/experience/outdoors?gad_source=1&&gclid=CjwKCAiAu9yqBhBmEiwAHTx5p5EJ-kOI5IP1ZV52SIWh0HfeQlY6iDnsPI9J_0whFQjUpRrC-fq9CRoCiksQAvD_BwE">Fayetteville Outdoor Activities</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://findingnwa.com/areas-of-interest/outdoors/">Outdoor Activities in Northwest Arkansas</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2 class="text-capitalize">Gyms and fitness centers</h2>
                                                                     <p>
                                                                         Survey the types of gyms available (chain vs locally owned) and check out the range of facilities and classes they offer, and any special amenities like pools or saunas. Be aware of membership fees and potential contract terms. Platforms like Google Maps, Yelp, and the gyms’ own websites are great tools for this research.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://ozarkirongym.com/">Ozark Iron Gym - Johnson</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://elmstreetgym.com/">Elm Street Gym - Springdale</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.jstreetgym.com/">J Street Gym - Bentonville</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://fitnessoneclubs.com/locations/lowell-ar">Fitness One - Rogers</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.crunch.com/locations/fayetteville">Crunch Fitness - Fayetteville</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.fayac.com/">Fayetteville Athletic Club</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2 class="text-capitalize">Clubs, bars and nightlife</h2>
                                                                     <p>
                                                                         Gauge the spectrum of options, identify venues that are popular or have top reviews, and assess the safety of areas known for nightlife. Yelp, local entertainment publications, and social media channels can offer insights into the most happening and recommended spots in town.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.tripadvisor.com/Attractions-g31589-Activities-c20-Fayetteville_Arkansas.html">Trip Advisor</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://nwatravelguide.com/fayetteville-arkansas/fayetteville-itinerary-2-nwa-dickson-street-downtown-nightlife/">Northwest Arkansas Travel Guide - Fayetteville</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.visitbentonville.com/food-and-drink/breweries/">Visit Bentonville - Nightlife</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2 class="text-capitalize">Cultural events, theaters and museums</h2>
                                                                     <p>
                                                                         Stay updated on festivals, exhibitions, and live performances. Local tourism sites, platforms like Eventbrite, and venue-specific websites are invaluable for schedules, exhibitions, and ticketing details.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="http://www.crystalbridges.org/">Crystal Bridges Museum</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://themomentary.org/?gad_source=1&&gclid=CjwKCAiAu9yqBhBmEiwAHTx5p1-W-ZDJUNVLGLhxd7i7KIMNcv8_efZF19mLDEZj51ZsGqx9brK1HhoCpmsQAvD_BwE">The Momentary</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://waltonartscenter.org/">Walton Arts Center</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://waltonartscenter.org/AMP/">WalMart Arkansas Music Pavillion</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.experiencefayetteville.com/?gad_source=1&&gclid=CjwKCAiAu9yqBhBmEiwAHTx5py-dseCAc69GNfXXh3VJkVUWrh5LB3kUg5tw5WCB_BuAzlrnDgo7BBoCv34QAvD_BwE">Experience Fayetteville</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.visitbentonville.com/?gad_source=1&&gclid=CjwKCAiAu9yqBhBmEiwAHTx5p8TOwf0IxrjCoT8P-gIZ-k_fwCBOAIC0IW2TxFcy9Q4eQ3zlqje7txoC7XIQAvD_BwE">Visit Bentonville</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://northwestarkansas.org/category/trip-ideas/?gad_source=1&&gclid=CjwKCAiAu9yqBhBmEiwAHTx5p-NUlhQtkM71_3YYxcixTowU2MPKBwVL6U0gEpMZZzkArDvDU4ZctRoCneUQAvD_BwE">NorthwestArkansas.org</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://findingnwa.com/?gad_source=1&&gclid=CjwKCAiAu9yqBhBmEiwAHTx5p9ltZdVjYr-kISFhRqreqroZp2ReLC3eNxSPGW93Hm36MXhOZbY4OBoCyPIQAvD_BwE">FindingNWA.com</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -535,18 +743,35 @@
                                                                     <p>
                                                                         Understand the diversity of stores and check for additional amenities like cinemas or food courts. Google Maps, shopping center websites, and local business directories can offer deeper insight into store listings and user reviews.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.pinnaclehillspromenade.com/en.html">Pinnacle Hills Promendae - Rogers</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.northwestarkansasmall.com/">Northwest Arkansas Mall - Fayetteville</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2 class="text-capitalize">Grocery stores</h2>
                                                                     <p>
                                                                         Determine the types of stores available, whether they’re large supermarkets, local grocers, or specialty markets. Consider the price points and product range. Google Maps, Yelp and store flyers can offer valuable insights into store locations and offerings.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.walmart.com/cp/food/976759">Walmart Grocery</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.wholefoodsmarket.com/shop/choose?utm_source=paidgoogle&&utm_medium=paidsearch&&utm_campaign=Estore_B2BCatering_Brand&&utm_content=paid_global&&gclid=CjwKCAiA9dGqBhAqEiwAmRpTC39ItKoFWdrKyTyhWPlt_KtXojmjIgY9yFR6zbr4ADeUmJOpBS3cixoCVGsQAvD_BwE">Whole Foods </a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.naturalgrocers.com/">Natural Grocers </a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.aldi.us/">Aldi</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.harpsfood.com/">Harps Grocery - Northwest Arkansas Regional Chain</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2 class="text-capitalize">Restaurants and cafes</h2>
                                                                     <p>
                                                                         Gauge the variety of cuisines available and seek-out popular, well-reviewed spots. Discern the balance between upscale restaurants, mid-tier eateries, and budget-friendly options by using platforms such as Yelp, Zomato, and Google Maps.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://findingnwa.com/areas-of-interest/food-drinks/">Finding NWA - Food & Drink</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -568,12 +793,24 @@
                                                                     <p>
                                                                         Understand the seasonal variations and monthly temperature ranges, as well as the precipitation patterns and unusual weather patterns or extremes the area might experience. Resources like the National Weather Service, Weather.com, and local meteorological departments provide comprehensive climate data to guide your understanding.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.weather.gov/">National Weather Service</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://weather.com/">The Weather Channel</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2 class="text-capitalize">Natural disasters common to the area</h2>
                                                                     <p>
                                                                         Understand the frequency and type of natural disasters in your new area, and familiarize yourself with local community and government preparedness and response strategies for these disasters. The Federal Emergency Management Agency (FEMA), local emergency management departments, and the U.S. Geological Survey offer invaluable information on disaster-prone areas and safety measures.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.fema.gov/">FEMA</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.usgs.gov/">US Geological Survey</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.washingtoncountyar.gov/residents/my-home/emergency-management">Washington County Emergency Management</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://bentoncountyar.gov/emergency-management/">Benton County Emergency Management</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2 class="text-capitalize">Geographical features <span class="red_color">(mountains, lakes, rivers, etc)</span></h2>
@@ -601,12 +838,22 @@
                                                                     <p>
                                                                         Check out the U.S. Census Bureau, City-Data.com, and local government websites for gathering detailed demographic details like age distribution, ethnic composition, education levels, and economic data like income levels and dominant industries to get a clearer picture of the community’s socio-economic landscape.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.census.gov/">US Census Bureau</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.city-data.com/">City-Data.com</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2 class="text-capitalize">Community events and social groups</h2>
                                                                     <p>
                                                                         Using platforms like Meetup.com and Eventbrite, you can explore local community events, and connect with social groups aligned with your personal interests.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="http://www.meetup.com/">MeetUp.com</a>
+                                                                        <a class="text-capitalize" target="_blank" href="http://www.eventbrite.com/">Eventbrite.com</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2 class="text-capitalize">Religious institutions</h2>
@@ -646,6 +893,18 @@
                                                                     <p>
                                                                         State Public Utility Commission websites and DSIRE will provide insights into licensed providers and their rate plans, and renewable energy incentives.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.bentonvillear.com/565/Utility-Service">Bentonville Utility Information</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.rwu.org/">Rogers Water Utility Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.fayetteville-ar.gov/419/Water-Service-and-Billing">Fayetteville Water Department</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://springdale.com/utilities/">Springdale Utility Information</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.siloamsprings.com/300/Utility-Services">Siloam Springs Utility Information</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.bellavistaar.gov/residents/utilities/index.php">Bella Vista Utility Information</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.cityoffarmingtonar.com/PublicUtilities.aspx">Farmington Utility Information</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.prairiegrovearkansas.org/publicworks">Prairie Grove Utility Information</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://cityofpearidge.com/utilities/">Pea Ridge Utility Information</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -679,6 +938,16 @@
                                                                     <p>
                                                                         Local Board of Elections, newspapers, and the state’s Secretary of State website are great resources for understanding the voter registration process, local election schedules, and the prominent political parties and figures.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.fayetteville-ar.gov/">City of Fayetteville</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.bentonvillear.com/">City of Bentonville</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.rogersar.gov/">City of Rogers</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.bellavistaar.gov/">City of Bella Vista</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.springdalear.gov/">City of Springdale</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.siloamsprings.com/">City of Siloam Springs</a>
+                                                                        <a class="text-capitalize" target="_blank" href="http://www.lowellarkansas.gov/">City of Lowell</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -700,18 +969,41 @@
                                                                     <p>
                                                                         Local Planning and Zoning Offices, government websites, and community meetings are invaluable for accessing detailed information on the types of projects, their potential impact on traffic and infrastructure, and timelines.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.ardot.gov/">Arkansas Department of Transportation</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.nwarpc.org/wp-content/uploads/2018/08/2035-NWA-Transportation-Plan.pdf">2035 NWA Regional Transportation Plan</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.bentonvillear.com/1569/Regional-Plans">Bentonville Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.rogersar.gov/482/Planning-Commission">Rogers Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.fayetteville-ar.gov/3086/Master-Plans">Fayetteville Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.springdalear.gov/page/planning-commission">Springdale Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.siloamsprings.com/167/Planning-CommissionBoard-of-Adjustment">Siloam Springs Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.bellavistaar.gov/city_departments/community_development/planning/index.php">Bella Vista Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.cityoffarmingtonar.com/PlanningCommission.aspx">Farmington Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.prairiegrovearkansas.org/bc-pc">Prairie Grove Planning Website</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://cityofpearidge.com/planning/">Pea Ridge Planning Website</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2 class="text-capitalize">Potential changes in property values</h2>
                                                                     <p>
                                                                         Real Estate Websites, local agents, and the County Property Appraiser’s Office are vital resources for researching historical property value trends, key influencing factors, and expert forecasts.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.arcountydata.com/index.asp">○	Benton County Tax Record</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.actdatascout.com/RealProperty/Arkansas/Washington">○	Washington County Tax Record</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2 class="text-capitalize">Upcoming infrastructure projects</h2>
                                                                     <p>
                                                                         The Local Department of Transportation, news outlets, and city or county public works departments are primary sources of information to be informed of upcoming infrastructural projects such as road constructions or public transport expansions.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.ardot.gov/">Arkansas Department of Transportation</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -733,12 +1025,21 @@
                                                                     <p>
                                                                         Use Care.com and local parenting forums to provide valuable insights into quality and reputable daycare services in the area, their accreditations, associated costs and parent feedback.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.care.com/">Care.com</a>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="sub_itemofitem mb-4">
                                                                     <h2 class="text-capitalize">Elderly care facilities or home care services</h2>
                                                                     <p>
                                                                         Resources like the Department of Health, websites like APlaceForMom.com, and community centers can guide you in understanding the types of services offered, licensing, costs, and firsthand reviews.
                                                                     </p>
+                                                                    <div class="external_link">
+                                                                        <span class="external_title">External Link :</span>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.healthy.arkansas.gov/">Arkansas Department of Health</a>
+                                                                        <a class="text-capitalize" target="_blank" href="https://www.aplaceformom.com/">A Place For Mom</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -799,7 +1100,7 @@
                                                             <button class="btn text-capitalize rounded-pill watch_video d-flex align-items-center"><img src="images/video_button.png" alt=""><span class="ms-1 ms-md-2">watch video</span></button>
                                                         </div>
                                                         <div class="me-lg-5 me-2">
-                                                            <a class="pdf_circle_dn rounded-circle" href="#"><img src="images/pdf.png" alt=""></a>
+                                                            <a class="pdf_circle_dn rounded-circle" href="pdf/Naturally_NWA_pdf_Step 2.pdf" download download data-bs-toggle="tooltip" data-bs-placement="bottom" title="Download PDF"><img src="images/pdf.png" alt=""></a>
                                                         </div>
                                                         <div id="right_arrow">
                                                             <img src="images/right_arrow.png" alt="">
@@ -999,7 +1300,7 @@
                                                             <button class="btn text-capitalize rounded-pill watch_video d-flex align-items-center"><img src="images/video_button.png" alt=""><span class="ms-1 ms-md-2">watch video</span></button>
                                                         </div>
                                                         <div class="me-lg-5 me-2">
-                                                            <a class="pdf_circle_dn rounded-circle" href="#"><img src="images/pdf.png" alt=""></a>
+                                                            <a class="pdf_circle_dn rounded-circle" href="pdf/Naturally_NWA_pdf_Step 3.pdf" download download data-bs-toggle="tooltip" data-bs-placement="bottom" title="Download PDF"><img src="images/pdf.png" alt=""></a>
                                                         </div>
                                                         <div id="right_arrow">
                                                             <img src="images/right_arrow.png" alt="">
@@ -1373,7 +1674,7 @@
                                                             <button class="btn text-capitalize rounded-pill watch_video d-flex align-items-center"><img src="images/video_button.png" alt=""><span class="ms-1 ms-md-2">watch video</span></button>
                                                         </div>
                                                         <div class="me-lg-5 me-2">
-                                                            <a class="pdf_circle_dn rounded-circle" href="#"><img src="images/pdf.png" alt=""></a>
+                                                            <a class="pdf_circle_dn rounded-circle" href="pdf/Naturally_NWA_pdf_Step 4.pdf" download download data-bs-toggle="tooltip" data-bs-placement="bottom" title="Download PDF"><img src="images/pdf.png" alt=""></a>
                                                         </div>
                                                         <div id="right_arrow">
                                                             <img src="images/right_arrow.png" alt="">
@@ -1384,7 +1685,7 @@
                                         </div>
                                         <div id="item4" class="collapse step" data-bs-parent="#accordion">
                                             <!-- ===================category=================== -->
-                                            <div id="category" class="pt-3">Sell your current home</div>
+                                            <div class="category pt-3">Sell your current home</div>
                                             <div class="card-body">
                                                 <!-- ==================Steps Involved and Things to Consider================= -->
                                                 <div class="card sub_item">
@@ -1724,18 +2025,6 @@
                                                                         Once all documents are signed and funds are dispersed, the property deed will be recorded in the buyer’s name, officially transferring ownership.
                                                                     </p>
                                                                 </div>
-                                                                <div class="sub_itemofitem mb-4">
-                                                                    <h2>Buyer’s Walk Through</h2>
-                                                                    <p>
-                                                                        Typically conducted a day or two before closing, this allows the buyer to ensure that agreed-upon repairs were made and the property is in expected condition.
-                                                                    </p>
-                                                                </div>
-                                                                <div class="sub_itemofitem mb-4">
-                                                                    <h2>Closing</h2>
-                                                                    <p>
-                                                                        Review and sign closing documents, including the deed of trust or mortgage, the promissory note, and the closing disclosure.
-                                                                    </p>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1748,7 +2037,7 @@
                                             <div class="step_header row align-items-center">
                                                 <div class="col-6">
                                                     <div class="step_number mb-2">Step (5)</div>
-                                                    <h6>Initial Research</h6>
+                                                    <h6>Purchase a New Home in Northwest Arkansas</h6>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="d-flex align-items-center justify-content-end">
@@ -1756,7 +2045,7 @@
                                                             <button class="btn text-capitalize rounded-pill watch_video d-flex align-items-center"><img src="images/video_button.png" alt=""><span class="ms-1 ms-md-2">watch video</span></button>
                                                         </div>
                                                         <div class="me-lg-5 me-2">
-                                                            <a class="pdf_circle_dn rounded-circle" href="#"><img src="images/pdf.png" alt=""></a>
+                                                            <a class="pdf_circle_dn rounded-circle" href="pdf/Naturally_NWA_pdf_Step 5.pdf" download download data-bs-toggle="tooltip" data-bs-placement="bottom" title="Download PDF"><img src="images/pdf.png" alt=""></a>
                                                         </div>
                                                         <div id="right_arrow">
                                                             <img src="images/right_arrow.png" alt="">
@@ -1766,10 +2055,254 @@
                                             </div>
                                         </div>
                                         <div id="item5" class="collapse step" data-bs-parent="#accordion">
+                                            <!-- category -->
+                                            <div class="category pt-3">Navigating the arkansas real estate contract</div>
                                             <div class="card-body">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                commodo consequat.
+                                                <!-- ======================== Purchase Contract ==================== -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#step5cat1of1" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Purchase Contract</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="step5cat1of1" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Determine Offer Price</h2>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Closing Costs</h2>
+                                                                    <p>
+                                                                        Pay your own or request the seller pay yours?
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Earnest Money vs Non-Refundable Deposit</h2>
+                                                                    <div class="ps-3 border-start border-1 ms-3">
+                                                                        <p>
+                                                                            Earnest Money is not very common in Arkansas because the Purchase Contract is buyer-friendly and a buyer would get to keep their Earnest Money if they terminated the contract based on inspection, financing, or appraisal issues.
+                                                                        </p>
+                                                                        <p>
+                                                                            Non-Refundable Deposits are preferred by sellers because it puts more skin in the game for the buyer. NRD’s can be tendered upon contract acceptance, or once repairs are agreed to. Your agent will help you understand if either of these make sense to include in your offer.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Surveys</h2>
+                                                                    <p>
+                                                                        Most common to get one when property is not in a platted subdivision.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Inspection Period</h2>
+                                                                    <p>
+                                                                        10 Business Days, Seller has 5 Business Days to respond.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Fixtures and Attached Equipment</h2>
+                                                                    <p>
+                                                                        Anything bolted or screwed into the walls is considered a fixture and should automatically convey with the property. Refrigerators, washer and dryers are not considered fixtures in Arkansas.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Contingencies</h2>
+                                                                    <p>
+                                                                        The Arkansas Real Estate Contract has contingencies built-in for inspections, financing, and appraisals. If you are selling a home, you will likely make your offer contingent on your home selling.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Disclosures</h2>
+                                                                    <p>
+                                                                        Seller will provide a Seller Property Disclosure within 3 days of an accepted offer. If the home was built before 1978 there will be a Lead Based Paint Disclosure as well.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Closing Date</h2>
+                                                                    <p>
+                                                                        If you are selling your current home in another state, you might have to schedule closing on your new home for 3 days after your current home closes. It is possible to close both on the same day, depending on the state laws.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Possession</h2>
+                                                                    <p>
+                                                                        Typically you can take possession once the closing paperwork is signed by all parties, and funding has taken place, but in some cases there can be early or delayed occupancy involved
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Offer Expiration</h2>
+                                                                    <p>
+                                                                        It is customary to give at least a 24 hour expiration on your offer. Depending on the market, or seller’s situation, the listing agent could have an offer deadline date that could be several days.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ======================== Terms to Consider in an Offer ==================== -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#step5cat1of2" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Terms to Consider in an Offer.</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="step5cat1of2" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Price</h2>
+                                                                    <p>
+                                                                        For most sellers, the price is the most important thing to them. Your agent will help you understand the market value and of the home as well as local market conditions to help you make the best offer.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Closing Costs</h2>
+                                                                    <p>
+                                                                        In a Seller’s Market, you will likely have to pay for your own closing costs, and sometimes you might offer to pay some of the seller’s closing costs in a multiple offer scenario. In a Buyer’s market, you have a good shot at getting the seller to pay your closing costs.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Deposits</h2>
+                                                                    <p>
+                                                                        Offering a Non-Refundable Deposit will make your offer stronger than offering Earnest Money, but be careful doing this because Non-Refundable is exactly what it sounds like - you can’t get it back.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Repair Request Guarantees</h2>
+                                                                    <p>
+                                                                        You can offer to purchase a home as-is, and that will make your offer stand out. This doesn’t mean you can’t do an inspection and back out of the deal if the inspection uncovers major repairs. You can also put a cap on the repair amount by saying something like, <b>“buyer will not request any individual repairs that are less than $1000 to fix.”</b>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Appraisal Gaps</h2>
+                                                                    <p>
+                                                                        In a competitive market, writing in an appraisal gap will make your offer stronger. This tells the seller up front that if the house doesn’t appraise for the purchase price, you’ll make up some or all of the difference in cash.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Occupancy</h2>
+                                                                    <p>
+                                                                        Some sellers need a little bit of time to move out of a house after closing, especially if they need the funds from closing to hire movers, or if they’re elderly and have lived in the house for many years. Offering Delayed Occupancy will make your offer stronger in these cases.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Closing Date</h2>
+                                                                    <p>
+                                                                        Aligning your closing date, or being flexible on the date, to the needs of the seller will make your offer stronger. If they are purchasing a new home, and already have it under contract, they will want to close both on the same day or within a few days of each other.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ======================== Once Under Contract ==================== -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#step5cat1of3" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Once Under Contract</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="step5cat1of3" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Make Final Application with Lender, turn in all requested documents ASAP</h2>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Hire Home Inspector</h2>
+                                                                    <p>
+                                                                        In Arkansas, you have 10 Business days to get all inspections done and make a repair request. You can request repairs, or negotiate terms like sales price, fixtures, etc.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Deposits</h2>
+                                                                    <p>
+                                                                        Offering a Non-Refundable Deposit will make your offer stronger than offering Earnest Money, but be careful doing this because Non-Refundable is exactly what it sounds like - you can’t get it back.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Submit Deposits (if applicable) with the help of your agent</h2>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                 <!-- ======================== Preparing to Move ==================== -->
+                                                 <div class="card sub_item">
+                                                    <div class="card-header" href="#step5cat1of4" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Preparing to Move</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="step5cat1of4" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Set a moving date</h2>
+                                                                    <p>
+                                                                        This will serve as your target and help you plan backwards.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Create a moving budget</h2>
+                                                                    <p>
+                                                                        Consider costs like hiring movers, buying packing supplies, and travel expenses.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Take Inventory</h2>
+                                                                    <p>
+                                                                        List items in each room to determine what to move, sell, donate or discard.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Hire a moving company or rent a truck</h2>
+                                                                    <p>
+                                                                        Get quotes, check review, and book in advance.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Start with Seldom-used items like seasonal decorations, books, etc</h2>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Label Boxes</h2>
+                                                                    <p>
+                                                                        Indicate content and the room it belongs to, and mark fragile items clearly.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Pack an Essentials Box</h2>
+                                                                    <p>
+                                                                        Important items you’ll need immediately after moving, such as toiletries, a change of clothes, medications, and other important supplies like screwdrivers, hammers, drill, etc.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Notify & Update</h2>
+                                                                    <p>
+                                                                        Fill out a change of address form with the Post Office, schedule utility services to be disconnected at your old home and connected at your new home. Inform important parties like banks, insurance companies, doctors, schools, etc. Be sure to check Amazon and other automatic ship subscriptions to make sure your address is changed with them to avoid a disruption in your services. Update License and Voter Registration.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Prepare for Moving Day</h2>
+                                                                    <p>
+                                                                        Disassemble furniture (if not hiring movers), clear pathways to make sure your movers can easily move through your home, arrange for pets and/or kids to hang out somewhere on moving day.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Moving Day</h2>
+                                                                    <p>
+                                                                        Supervise movers, take inventory, and do a final walk-through of all rooms, closets and cabinets to make sure you don’t forget anything, and be sure to lock all doors and windows and secure the keys and garage door openers when leaving for the last time.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1778,7 +2311,7 @@
                                             <div class="step_header row align-items-center">
                                                 <div class="col-6">
                                                     <div class="step_number mb-2">Step (6)</div>
-                                                    <h6>Initial Research</h6>
+                                                    <h6>Settle Into Your New Home</h6>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="d-flex align-items-center justify-content-end">
@@ -1786,7 +2319,7 @@
                                                             <button class="btn text-capitalize rounded-pill watch_video d-flex align-items-center"><img src="images/video_button.png" alt=""><span class="ms-1 ms-md-2">watch video</span></button>
                                                         </div>
                                                         <div class="me-lg-5 me-2">
-                                                            <a class="pdf_circle_dn rounded-circle" href="#"><img src="images/pdf.png" alt=""></a>
+                                                            <a class="pdf_circle_dn rounded-circle" href="pdf/Naturally_NWA_pdf_Step 6.pdf" download download data-bs-toggle="tooltip" data-bs-placement="bottom" title="Download PDF"><img src="images/pdf.png" alt=""></a>
                                                         </div>
                                                         <div id="right_arrow">
                                                             <img src="images/right_arrow.png" alt="">
@@ -1796,10 +2329,147 @@
                                             </div>
                                         </div>
                                         <div id="item6" class="collapse step" data-bs-parent="#accordion">
+                                             <!-- ===================category=================== -->
+                                             <div class="category pt-3">Settle Into Your New Home</div>
                                             <div class="card-body">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                commodo consequat.
+                                                <!-- ======================== In Your New Home ==================== -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#step6cat1of1" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">In Your New Home</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="step6cat1of1" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Unpacking</h2>
+                                                                    <p>
+                                                                        Begin with essentials and gradually unpack other items, organizing as you go.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Home Personalization</h2>
+                                                                    <p>
+                                                                        Hang curtains, lay rugs, display personal items, and arrange furniture to make the space feel like <b>“home”</b>.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Safety Checks</h2>
+                                                                    <p>
+                                                                        Ensure smoke and carbon monoxide detectors work. Familiarize yourself with emergency exits and locate the main water shut-off.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Home Improvements</h2>
+                                                                    <p>
+                                                                        Consider any renovations or improvements you’d like to make such as painting or installing new fixtures.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Maintenance</h2>
+                                                                    <p>
+                                                                        Establish a regular home maintenance routine. Check things like HVAC filters, gutters, and the condition of roofing.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Meet the Neighbors</h2>
+                                                                    <p>
+                                                                        Introduce Yourself. This can be done casually or through a housewarming gathering.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Garden & Lawn</h2>
+                                                                    <p>
+                                                                        If you have outdoor space, consider planting flowers, starting a vegetable garden, or setting up a patio or deck area.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ======================== In the New Community ==================== -->
+                                                <div class="card sub_item">
+                                                    <div class="card-header" href="#step6cat1of1" data-bs-toggle="collapse">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/plus.png" alt="">
+                                                            <h2 class="text-capitalize mb-0 ms-2 sub_item_header">In the New Community</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div id="step6cat1of1" class="collapse" data-bs-parent="">
+                                                        <div class="card-body">
+                                                            <div class="ps-5">
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Explore the Neighborhood</h2>
+                                                                    <p>
+                                                                        Familiarize yourself with local amenities such as grocery stores, parks, post offices, and restaurants.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Local Services & Businesses</h2>
+                                                                    <p>
+                                                                        Identify key places such as hairdressers, dry cleaners, gyms, libraries, and other services you regularly use.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Community Events</h2>
+                                                                    <p>
+                                                                        Attend local events or fairs to meet people and understand local traditions and customs.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Schools</h2>
+                                                                    <p>
+                                                                        If you have children, get involved in their school activities and meetings. This is a great way to meet other parents and integrate into the community.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Join Clubs or Organizations</h2>
+                                                                    <p>
+                                                                        Find Local clubs or groups that align with your interests or hobbies.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Local Media</h2>
+                                                                    <p>
+                                                                        Subscribe to or follow local newspapers, radio stations or TV channels to stay informed.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Volunteer</h2>
+                                                                    <p>
+                                                                        Offer your time to local community services or charity organizations. this is a rewarding way to meet people and feel connected.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Religious and Cultural Centers</h2>
+                                                                    <p>
+                                                                        If you are religious, or have specific cultural affiliations, find local places of worship or cultural centers.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Healthcare</h2>
+                                                                    <p>
+                                                                        Identify a new primary doctor, dentist and other essential healthcare providers.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Recreation Centers</h2>
+                                                                    <p>
+                                                                        Check out local recreation centers or parks for classes and activities.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="sub_itemofitem mb-4">
+                                                                    <h2 class="text-capitalize">Connect Online</h2>
+                                                                    <p>
+                                                                        Join neighborhood groups or forums on platforms like Nextdoor or Facebook to stay in the loop about local happenings and recommendations.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1808,7 +2478,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 order-1 .order-md-2 mt-4 mb-5 mt-lg-0">
+                    <!-- <div class="col-md-12 videoDownloodCol order-1 mt-4 mb-5 mt-lg-0 d-none">
                         <div class="rightSideYoutubeVideo sticky-top">
                         <div id="introPlayer" class="rounded">
 
@@ -1819,44 +2489,83 @@
                                 <img class="donloadIcon" src="images/download icon.png" alt="">
                             </button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
-
+    <!-- mobile video and pdf downloader -->
+    <div id="MIvPd">
+        <div id="MIv" class="d-flex justify-content-end" onclick="document.getElementById('ytVideoId').value='r7Z08hgGfKc'; stepWatchVideo(this)">
+            <div class="rounded-circle d-flex justify-content-center align-items-center shadow-lg">
+                <img src="images/video_button_white.png" alt="">
+            </div>
+        </div>
+        <div id="MPd">
+            <a class="text-decoration-none" href="pdf/complete_singlePDF_NWA.pdf" download>
+            <div class="mobilePdfDownloader">
+                <img src="images/red_download.jpg" alt="">
+                <span class="text-uppercase">pdf</span>
+            </div>
+            </a>
+        </div>
+    </div>
     <!-- ====================
          popup video  
     ========================= -->
     <div id="popup_video" class="d-none">
-        <div class="video_area ">
-            <div id="videoPlayer" class="w-100 h-100 rounded">
-                <div id="player" class="rounded"></div>
+        <div class="video_area">
+            <div class="row h-100 overflow-auto">
+                <div class="col-lg-9">
+                    <div class="videoContent d-flex flex-column justify-content-between">
+                        <div id="videoPlayer" class="rounded">
+                            <div id="player" class="rounded"></div>
+                            <div id="video_cross" class="bg_red d-flex justify-content-center align-items-center"><img src="images/cross.png" alt=""></div>
+                        </div>
+                        <div class="vc_dpdf d-flex align-items-center justify-content-between w-100">
+                            <div class="viewCount p-3 rounded d-flex align-items-center">
+                                <img src="images/viewCount.png" alt="">
+                                <span class="ms-2 videoViewCount"></span>
+                            </div>
+                            <a class="download_btn_pdf py-2 ms-4 btn bg_red d-flex justify-content-between align-items-center text-white font-weight-bold dropdown_pdf_btn" href="pdf/Naturally_NWA_pdf_Nov 30,2023.pdf" download>
+                                <img class="donloadIcon" src="images/download icon.png" alt="">
+                                <span class="ms-2">PDF</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-none">
+                    <div class="videoPlayItems mt-4 mt-lg-0">
+                        <div class="videoPlayItemsArea">
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="video_cross" class="bg_red d-flex justify-content-center align-items-center"><img src="images/cross.png" alt=""></div>
+            <input id="ytVideoId" type="hidden">
+        </div>
+    </div>
+
+    <!-- <div class="WatchVideoByPopup d-none">
+        <div class="WatchVideoByPopupPlayer">
+            <div id="youtubeVideoPlayer"></div>
+            <div class="WatchVideoByPopupCross d-flex justify-content-center align-items-center">
+                <img src="images/cross.png" alt="">
+            </div>
             <div class="vc_dpdf d-flex align-items-center justify-content-between w-100 mt-3">
                 <div class="viewCount p-3 rounded d-flex align-items-center">
                     <img src="images/viewCount.png" alt="">
                     <span class="ms-2 videoViewCount"></span>
                 </div>
-                <button id="download_btn_pdf" class="py-2 px-4 ms-4 btn bg_red w-100 d-flex justify-content-between align-items-center text-white font-weight-bold mt-3">
+                <button class="download_btn_pdf py-2 px-4 ms-4 btn bg_red w-100 d-flex justify-content-between align-items-center text-white font-weight-bold">
                     <img src="images/pdf-icon download.png" alt="">
                     <span>Download PDF</span>
                     <img src="images/download icon.png" alt="">
                 </button>
             </div>
         </div>
-    </div>
-
-    <div class="WatchVideoByPopup d-none">
-        <div class="WatchVideoByPopupPlayer">
-            <div id="youtubeVideoPlayer"></div>
-            <div class="WatchVideoByPopupCross d-flex justify-content-center align-items-center">
-                <img src="images/cross.png" alt="">
-            </div>
-        </div>
         <div class="shadwo"></div>
-    </div>
+    </div> -->
    
     <script src="js/bootstrap.min.js"></script>
     <script src="js/ytData.js"></script> 

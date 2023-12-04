@@ -5,6 +5,10 @@
 body, html, *{
     font-family: 'Inter', sans-serif !important;
 }
+body{
+    height: 100%;
+    background-color: #FDFDFD;
+}
 .navbar-nav{
     .nav-item{
         .nav-link{
@@ -15,10 +19,25 @@ body, html, *{
         }
     }
 }
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+    border-color: #BB0F31 !important;
+}
+
+.introwatch_video {
+    transition: all 0.3s;
+    &:hover{
+        background-color: #fae8ed;
+    }
+}
+
 .contactNumber{
     font-size: 12px;
 }
 
+#youtubeVideoPlayer{
+    border-radius: 10px;
+}
 // bottom nevbar
 
 .navbar_button{
@@ -195,12 +214,22 @@ p{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 50%;
-        height: 50%;
-        background-color: rgb(0, 0, 0);
+        width: 60%;
+        height: 60%;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.25);
+        box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.25);
         border-radius: 10px;
+        padding: 15px;
+        transition: all 0.3s;
+        .videoContent{
+            height: 100%;
+        }
         #videoPlayer{
-            
+            width: 100%;
+            height: 85%;
+            // padding: 30px;
         }
         #video_cross{
             width: 40px;
@@ -211,14 +240,9 @@ p{
             border-radius: 10px;
             cursor: pointer;
         }
-        .vc_dpdf{
-            position: absolute;
-            top: 100%;
-        }
     }
 }
-#download_btn_pdf{
-    width: 340px !important;
+.download_btn_pdf{
     margin-top: 0 !important;
 }
 .viewCount{
@@ -226,17 +250,26 @@ p{
 }
 .category{
     font-size: 13px;
-    font-weight: bold;
-    color: #909090;
+    font-weight: 500;
+    color: #BB0F31;
     margin-left: 20px;
     margin-right: 20px;
     &:first-child{
         border-top: 1px solid #CCCCCC;
     }
 }
+.videoPlayItems{
+    overflow-y: auto;
+}
 
-
-
+.ytPlayVideo{
+    width: 250px;
+    height: 150px;
+    background-color: #252323;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
 
 // ================================================================================================================================
 
@@ -259,14 +292,14 @@ p{
     }
     100% {
     opacity: 0;
-    width: 2%;
-    height: 2%;
+    width: 1%;
+    height: 1%;
     // -webkit-transform: scale(.1) translate3d(2000px, 0, 0);
     // transform: scale(.1) translate3d(0, 0, 0);
     // -webkit-transform-origin: right center;
     // transform-origin: right center;
-    left: 70%;
-    top: 50px;
+    left: var(--introVideoLeft);
+    top: var(--introVideoTop);
     }
 }
 
@@ -276,10 +309,28 @@ p{
     border-radius: 50%;
 }
 .pulse {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
     animation: pulse-animation 2s infinite;
   }
   
-  @keyframes pulse-animation {
+.pulseMintro{
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    animation: pulse-animation-intro 2s infinite !important;
+}
+  
+@keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgba(255, 0, 0, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(255, 0, 0, 0);
+    }
+}
+@keyframes pulse-animation-intro {
     0% {
       box-shadow: 0 0 0 0px rgba(255, 0, 0, 0.5);
     }
@@ -349,14 +400,16 @@ p{
     border-radius: 10px;
     background-color: #BB0F31;
     top: -40px;
+    cursor: pointer;
 }
 .transoff{
     transition: unset;
 }
 
 .external_link{
+
     > *{
-        margin-right: 15px;
+        margin-right: 22px;
         &:last-child{
             margin-right: 0;
         }
@@ -364,9 +417,13 @@ p{
     span{
         font-size: 13px;
         font-weight: 500;
+        color: #BB0F31;
     }
     a{
         font-size: 13px;
+        display: inline-block;
+        vertical-align: baseline;
+        margin-bottom: 8px;
     }
 }
 
@@ -379,4 +436,61 @@ p{
             content: url('../images/map.png');
         }
     }
+}
+
+// mobile video and pdf downloader
+#MIvPd{
+    position: fixed;
+    right: 0;
+    bottom: 10px;
+    display: none;
+    #MIv{
+        div{
+            width: 50px;
+            height: 50px;
+            background-color: #BB0F31;
+        }
+    }
+    #MPd{
+        margin-top: 8px;
+        div{
+            width: 130px;
+            background-color: #fff;
+            color: #BB0F31;
+            border: 1px solid #BB0F31;
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+            height: 50px;
+            border-radius: 15rem;
+            text-align: center;
+            line-height: 50px;
+            span{
+                font-weight: bold;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+.mobilePdfDownloader{
+    transition: all 0.3s;
+}
+.mpdbsc{
+    // animation: smalpdfbtn 1s;
+    transition: all 0.3s;
+    width: 50px !important;
+    height: 50px !important;
+    span{
+        opacity: 0;
+    }
+}
+
+@keyframes smalpdfbtn {
+
+}
+.videoTitle{
+    color: #BB0F31;
+    font-size: 13px;
+    font-weight: 500;
+}
+#playerEmbed{
+    border-radius: 10px;
 }
