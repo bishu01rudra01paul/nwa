@@ -1,6 +1,6 @@
 @media (min-width: 2560px) {
   .col-lg-6:has(> .embedVideo) {
-    width: 100% !important;
+    width: 100%;
   }
   .col-lg-6:nth-child(2) h6 {
     margin-top: 30px;
@@ -47,9 +47,6 @@
     height: 100%;
     background-color: red;
     transition: all 1s;
-  }
-  .step.collapse:not(.show) {
-    display: block;
   }
   .full_body .container .videoDownloodCol {
     display: none !important;
@@ -158,8 +155,20 @@
   .step_header .watch_video span {
     font-size: 12px !important;
   }
+  .VoiceYourIdeas {
+    bottom: 125px !important;
+    right: 0 !important;
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .VoiceYourIdeas img {
+    margin-right: 0 !important;
+  }
 }
-@media (max-width: 575px) {
+@media (max-width: 767px) {
+  .watch_video {
+    border-radius: 50%;
+  }
   #popup_video .video_area {
     width: 100% !important;
     padding: 10px !important;
@@ -215,6 +224,16 @@
     font-size: 12px;
   }
   .navbar_button .navbar_contant .relocation_series_page {
+    margin-left: 100px !important;
+    width: 150px;
+  }
+  .navbar_button .navbar_contant .relocation_series_page img {
+    width: 100%;
+  }
+  #steps_nav_wv_dpdf .download_btn_pdf {
+    margin-left: 0 !important;
+  }
+  .navbar-nav.m-auto.topnavbar992to1200 {
     margin-left: 100px !important;
   }
 }/*# sourceMappingURL=screen.css.map */

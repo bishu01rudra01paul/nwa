@@ -22,3 +22,18 @@
 //     console.error(error);
 // })
 
+fetch("youtubeData.php", {
+        "method": "POST",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        // "body": JSON.stringify(videoIds)
+}).then(function(response){
+    return response.json()
+}).then((data) => {
+    // console.log(data)
+    document.querySelector('.videoViewCount').innerHTML = data[0];
+
+}).catch(error =>{
+    console.error(error);
+})

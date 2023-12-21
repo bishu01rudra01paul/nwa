@@ -20,6 +20,7 @@ body{
     }
 }
 
+
 .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
     border-color: #BB0F31 !important;
 }
@@ -123,7 +124,11 @@ body{
         }
     }
 }
-
+.nav-link{
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
 .sub_item{
     .sub_item_header{
         // font-weight: bold;
@@ -228,7 +233,7 @@ p{
         }
         #videoPlayer{
             width: 100%;
-            height: 85%;
+            height: 90%;
             // padding: 30px;
         }
         #video_cross{
@@ -493,4 +498,70 @@ p{
 }
 #playerEmbed{
     border-radius: 10px;
+}
+
+
+// switch screen affect
+
+.switchModle{
+    position: relative;
+    width: 70px;
+    height: 30px;
+    input[type='checkbox']{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    span{
+        display: inline-block;
+        width: 70px;
+        height: 30px;
+        border: 3px solid #BB0F31;
+        background-color: transparent;
+        border-radius: 15rem;
+        position: absolute;
+        &::before{
+            content: '';
+            position: absolute;
+            left: var(--switchModleLeft, 5px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #BB0F31;
+            transition: all 0.5s;
+        }
+    }
+}
+
+#switchModle > span:nth-child(1){
+    color: #BB0F31;
+}
+
+.widWidth2560up{
+    max-width: 50%;
+}
+.VoiceYourIdeas{
+    // padding: 15px 15px;
+    width: 157px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #BB0F31;
+    border-radius: 15rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    transition: all 0.3s;
+    overflow: hidden;
+    img{
+        margin-right: 5px;
+    }
+    &:hover{
+        background-color: #9c102c;
+    }
 }

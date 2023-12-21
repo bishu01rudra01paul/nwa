@@ -23,7 +23,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="mynavbar">
-                    <ul class="navbar-nav m-auto">
+                    <ul class="navbar-nav m-auto topnavbar992to1200">
                         <li class="nav-item">
                             <a class="nav-link" href="https://www.naturallynwa.com/relocation/" target="_blank">Everything Relocation</a>
                         </li>
@@ -53,7 +53,7 @@
         <div class="navbar_button container-fluid">
             <div class="container">
                 <div class="navbar_contant">
-                    <a class="logo" href="javascript:void(0)"><img src="images/logo.png" alt="Logo"></a>
+                    <a class="logo" href="https://naturallynwa.com/" target="_blank"><img src="images/logo.png" alt="Logo"></a>
                     <div id="navbar_RSP_steps_wv_dpdf" class="d-flex align-items-center justify-content-between h-100">
                         <div class="relocation_series_page d-flex align-items-center img-fluid">
                             <img src="images/Relocation series page.png" alt="">
@@ -138,7 +138,14 @@
                 <div class="row">
                     <div class="slideArows d-flex align-items-center justify-content-between">
                         <div onclick="slideHorizontal('leftArrow')" class="slideLeftArrow me-4 slideArrow d-flex justify-content-center align-items-center"><img src="images/leftArrow.png" alt=""></div>
-                        <!-- <div class="slideIndicatior w-100"><div class="scrollBarMove"></div></div> -->
+                        <div id="switchModle" class="d-flex">
+                            <span class="me-3">Horizontal</span>
+                            <label class="switchModle">
+                                <input class="switchCheckbox" type="checkbox" onclick="switchToggole(this);">
+                                <span></span>
+                            </label>
+                            <span class="ms-3">Vertical</span>
+                        </div>
                         <div onclick="slideHorizontal('rightArrow')" class="slideRightArrow ms-4 slideArrow d-flex justify-content-center align-items-center"><img src="images/rightArrow.png" alt=""></div>
                     </div>
                     <div class="col-md-12 pdfWebFormatArea col-md-12 order-2">
@@ -220,7 +227,7 @@
                                                             <h2 class="text-capitalize mb-0 ms-2 sub_item_header">housing</h2>
                                                         </div>
                                                     </div>
-                                                    <div id="item1of1" class="collapse show" data-bs-parent="">
+                                                    <div id="item1of1" class="collapse" data-bs-parent="">
                                                         <div class="card-body">
                                                             <!-- ==============Housing Market Prices (Buying & Renting)============== -->
                                                             <div class="ps-5">
@@ -299,7 +306,7 @@
                                                             <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Cost of living</h2>
                                                         </div>
                                                     </div>
-                                                    <div id="item1of2" class="collapse show" data-bs-parent="">
+                                                    <div id="item1of2" class="collapse" data-bs-parent="">
                                                         <div class="card-body">
                                                             <!-- ==============Utilities============== -->
                                                             <div class="ps-5">
@@ -401,7 +408,7 @@
                                                             <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Employment Opportunities</h2>
                                                         </div>
                                                     </div>
-                                                    <div id="item1of3" class="collapse show" data-bs-parent="">
+                                                    <div id="item1of3" class="collapse" data-bs-parent="">
                                                         <div class="card-body">
                                                             <!-- ==============Utilities============== -->
                                                             <div class="ps-5">
@@ -452,7 +459,7 @@
                                                             <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Education</h2>
                                                         </div>
                                                     </div>
-                                                    <div id="item1of4" class="collapse show" data-bs-parent="">
+                                                    <div id="item1of4" class="collapse" data-bs-parent="">
                                                         <div class="card-body">
                                                             <div class="ps-5">
                                                                 <div class="sub_itemofitem mb-4">
@@ -504,7 +511,7 @@
                                                             <h2 class="text-capitalize mb-0 ms-2 sub_item_header">Transportation</h2>
                                                         </div>
                                                     </div>
-                                                    <div id="item1of5" class="collapse show" data-bs-parent="">
+                                                    <div id="item1of5" class="collapse" data-bs-parent="">
                                                         <div class="card-body">
                                                             <div class="ps-5">
                                                                 <div class="sub_itemofitem mb-4">
@@ -2510,6 +2517,9 @@
             </a>
         </div>
     </div>
+
+    <a class="VoiceYourIdeas" href="https://naturallynwa.com/feedback/" target="_blank"><img class="" src="images/voice.svg" alt="voice"> <span>Voice your ideas</span></a>
+
     <!-- ====================
          popup video  
     ========================= -->
@@ -2525,7 +2535,7 @@
                         <div class="vc_dpdf d-flex align-items-center justify-content-between w-100">
                             <div class="viewCount p-3 rounded d-flex align-items-center">
                                 <img src="images/viewCount.png" alt="">
-                                <span class="ms-2 videoViewCount"></span>
+                                <span class="ms-1 videoViewCount"></span>
                             </div>
                             <a class="download_btn_pdf py-2 ms-4 btn bg_red d-flex justify-content-between align-items-center text-white font-weight-bold dropdown_pdf_btn" href="pdf/Naturally_NWA_pdf_Nov 30,2023.pdf" download>
                                 <img class="donloadIcon" src="images/download icon.png" alt="">
